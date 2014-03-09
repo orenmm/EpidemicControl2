@@ -35,6 +35,18 @@
     // Dispose of any resources that can be recreated.
 }
 
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    //hide the navigation top bar
+    self.navigationController.navigationBar.hidden = NO;
+}
+
+
+
+
+
+
 - (IBAction)register:(id)sender {
     NSString * firstName = self.firstNameTextField.text;
     NSString * lastName = self.lastNameTextDField.text;
