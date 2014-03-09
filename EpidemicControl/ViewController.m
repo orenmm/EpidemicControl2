@@ -62,11 +62,11 @@
 }
 
 
-
-
-
-
-
-
-
+- (IBAction)login:(id)sender {
+    if ((self.emailField.text.length>0) && (self.passwordField.text.length>0))
+    {
+        [self performSegueWithIdentifier:@"Login" sender:self];
+    }
+    
+}
 @end

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2224161518CC72970017903C /* spalshForEC960.png in Resources */ = {isa = PBXBuildFile; fileRef = 2224161418CC72970017903C /* spalshForEC960.png */; };
 		224285EE18C919170099E8D7 /* epidemic_c_login1.png in Resources */ = {isa = PBXBuildFile; fileRef = 224285ED18C919170099E8D7 /* epidemic_c_login1.png */; };
 		224285F318C922A40099E8D7 /* LocationMapViewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 224285F218C922A40099E8D7 /* LocationMapViewViewController.m */; };
 		224285F518C9235B0099E8D7 /* epidemic_c_login.png in Resources */ = {isa = PBXBuildFile; fileRef = 224285F418C9235B0099E8D7 /* epidemic_c_login.png */; };
@@ -45,6 +46,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2224161418CC72970017903C /* spalshForEC960.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = spalshForEC960.png; sourceTree = "<group>"; };
 		224285ED18C919170099E8D7 /* epidemic_c_login1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = epidemic_c_login1.png; sourceTree = "<group>"; };
 		224285F118C922A40099E8D7 /* LocationMapViewViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocationMapViewViewController.h; sourceTree = "<group>"; };
 		224285F218C922A40099E8D7 /* LocationMapViewViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationMapViewViewController.m; sourceTree = "<group>"; };
@@ -109,6 +111,7 @@
 		229304F118C9EBF2008AEDCC /* images */ = {
 			isa = PBXGroup;
 			children = (
+				2224161418CC72970017903C /* spalshForEC960.png */,
 				229F17BD18CA67120051A435 /* search_icon.png */,
 				2263FD9118CA3E7200C70C72 /* textfield.png */,
 				229304F818C9FD9C008AEDCC /* spalshForEC.png */,
@@ -278,6 +281,7 @@
 			files = (
 				229304F718C9F546008AEDCC /* pen+paper.png in Resources */,
 				22D80D8718C8F7D5003D84A4 /* InfoPlist.strings in Resources */,
+				2224161518CC72970017903C /* spalshForEC960.png in Resources */,
 				224285F518C9235B0099E8D7 /* epidemic_c_login.png in Resources */,
 				229F17BE18CA67120051A435 /* search_icon.png in Resources */,
 				229304F918C9FD9C008AEDCC /* spalshForEC.png in Resources */,
@@ -433,7 +437,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "EpidemicControl/EpidemicControl-Prefix.pch";
 				INFOPLIST_FILE = "EpidemicControl/EpidemicControl-Info.plist";
@@ -446,7 +449,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "EpidemicControl/EpidemicControl-Prefix.pch";
 				INFOPLIST_FILE = "EpidemicControl/EpidemicControl-Info.plist";
