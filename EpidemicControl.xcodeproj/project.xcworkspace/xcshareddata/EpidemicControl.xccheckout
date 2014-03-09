@@ -5,68 +5,36 @@
 	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
 	<false/>
 	<key>IDESourceControlProjectIdentifier</key>
-<<<<<<< HEAD
-	<string>295B6292-7C58-40F0-8CD6-DD2812F5FB45</string>
-=======
-	<string>898406B1-9B33-4DD0-AFC6-E99675708E9E</string>
->>>>>>> 1734acf5370a4c95ec276b5b45ef11632dc96a43
+	<string>ACFE3918-DADC-46D2-9264-64A3290451C2</string>
 	<key>IDESourceControlProjectName</key>
 	<string>EpidemicControl</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
-<<<<<<< HEAD
-		<key>D6A3BF8C-6F78-4CAA-8992-FD34C963D0D2</key>
-=======
-		<key>486EB4CF-5DB6-45DD-9123-6EF4BB7A0422</key>
->>>>>>> 1734acf5370a4c95ec276b5b45ef11632dc96a43
-		<string>https://github.com/orenmm/epicon.git</string>
+		<key>BC4ABF38-F463-4AD1-8658-FD8AAECE23F3</key>
+		<string>https://github.com/orenmm/EpidemicControl2.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
 	<string>EpidemicControl.xcodeproj/project.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-<<<<<<< HEAD
-		<key>D6A3BF8C-6F78-4CAA-8992-FD34C963D0D2</key>
-=======
-		<key>486EB4CF-5DB6-45DD-9123-6EF4BB7A0422</key>
->>>>>>> 1734acf5370a4c95ec276b5b45ef11632dc96a43
+		<key>BC4ABF38-F463-4AD1-8658-FD8AAECE23F3</key>
 		<string>../..</string>
-		<key>8F10CCF2-EE38-48D2-8113-53849F160312</key>
-		<string>../../EpidemicControl</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
-	<string>https://github.com/orenmm/epicon.git</string>
+	<string>https://github.com/orenmm/EpidemicControl2.git</string>
 	<key>IDESourceControlProjectVersion</key>
 	<integer>110</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-<<<<<<< HEAD
-	<string>D6A3BF8C-6F78-4CAA-8992-FD34C963D0D2</string>
-=======
-	<string>486EB4CF-5DB6-45DD-9123-6EF4BB7A0422</string>
->>>>>>> 1734acf5370a4c95ec276b5b45ef11632dc96a43
+	<string>BC4ABF38-F463-4AD1-8658-FD8AAECE23F3</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-<<<<<<< HEAD
-			<string>D6A3BF8C-6F78-4CAA-8992-FD34C963D0D2</string>
+			<string>BC4ABF38-F463-4AD1-8658-FD8AAECE23F3</string>
 			<key>IDESourceControlWCCName</key>
-			<string>epicon</string>
-=======
-			<string>486EB4CF-5DB6-45DD-9123-6EF4BB7A0422</string>
-			<key>IDESourceControlWCCName</key>
-			<string>epicon</string>
-		</dict>
-		<dict>
-			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
-			<string>public.vcs.git</string>
-			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>8F10CCF2-EE38-48D2-8113-53849F160312</string>
-			<key>IDESourceControlWCCName</key>
-			<string>EpidemicControl</string>
->>>>>>> 1734acf5370a4c95ec276b5b45ef11632dc96a43
+			<string>EpidemicControl2</string>
 		</dict>
 	</array>
 </dict>
