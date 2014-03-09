@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+<<<<<<< HEAD
+	<string>295B6292-7C58-40F0-8CD6-DD2812F5FB45</string>
+=======
+	<string>898406B1-9B33-4DD0-AFC6-E99675708E9E</string>
+>>>>>>> 1734acf5370a4c95ec276b5b45ef11632dc96a43
+	<key>IDESourceControlProjectName</key>
+	<string>EpidemicControl</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+<<<<<<< HEAD
+		<key>D6A3BF8C-6F78-4CAA-8992-FD34C963D0D2</key>
+=======
+		<key>486EB4CF-5DB6-45DD-9123-6EF4BB7A0422</key>
+>>>>>>> 1734acf5370a4c95ec276b5b45ef11632dc96a43
+		<string>https://github.com/orenmm/epicon.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>EpidemicControl.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+<<<<<<< HEAD
+		<key>D6A3BF8C-6F78-4CAA-8992-FD34C963D0D2</key>
+=======
+		<key>486EB4CF-5DB6-45DD-9123-6EF4BB7A0422</key>
+>>>>>>> 1734acf5370a4c95ec276b5b45ef11632dc96a43
+		<string>../..</string>
+		<key>8F10CCF2-EE38-48D2-8113-53849F160312</key>
+		<string>../../EpidemicControl</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/orenmm/epicon.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+<<<<<<< HEAD
+	<string>D6A3BF8C-6F78-4CAA-8992-FD34C963D0D2</string>
+=======
+	<string>486EB4CF-5DB6-45DD-9123-6EF4BB7A0422</string>
+>>>>>>> 1734acf5370a4c95ec276b5b45ef11632dc96a43
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+<<<<<<< HEAD
+			<string>D6A3BF8C-6F78-4CAA-8992-FD34C963D0D2</string>
+			<key>IDESourceControlWCCName</key>
+			<string>epicon</string>
+=======
+			<string>486EB4CF-5DB6-45DD-9123-6EF4BB7A0422</string>
+			<key>IDESourceControlWCCName</key>
+			<string>epicon</string>
+		</dict>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>8F10CCF2-EE38-48D2-8113-53849F160312</string>
+			<key>IDESourceControlWCCName</key>
+			<string>EpidemicControl</string>
+>>>>>>> 1734acf5370a4c95ec276b5b45ef11632dc96a43
+		</dict>
+	</array>
+</dict>
+</plist>
