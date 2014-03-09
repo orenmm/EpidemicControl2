@@ -9,11 +9,14 @@
 #import <UIKit/UIKit.h>
 #import <MapKit/MapKit.h>
 #import "markerOnMap.h"
+#import "User.h"
 
 @interface LocationMapViewViewController : UIViewController<MKMapViewDelegate, UITextFieldDelegate>
 @property (weak, nonatomic) IBOutlet MKMapView *map;
 - (IBAction)hideKeyboard:(id)sender;
 @property (weak, nonatomic) IBOutlet UITextField *mapTextField;
+
+@property (nonatomic,strong) User* user;
 
 
 @end
