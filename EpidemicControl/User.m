@@ -45,4 +45,22 @@
     
     
 }
+
++(void)userLoginWithEmail:(NSString*)email andPassword:(NSString *)pass :(APIReturnsDictionary)completionBlock
+{
+    AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
+    manager.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"text/html", nil];
+    NSDictionary *parameters = @{@"email": email, @"password":pass};
+    [manager POST:@"http://70.32.106.118/doctors/rest/user/login.php" parameters:parameters success:^(AFHTTPRequestOperation *operation, id responseObject) {
+                
+        NSLog(@"JSON: %@", responseObject);
+        
+        completionBlock(responseObject);
+        
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        
+        NSLog(@"Error: %@", error);
+
+    }];
+}
 @end

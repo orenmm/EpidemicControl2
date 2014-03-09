@@ -55,7 +55,7 @@
             }
             else
             {
-            [self performSegueWithIdentifier:@"RegisterToMap" sender:user];
+                [self performSegueWithIdentifier:@"RegisterToMap" sender:user];
             }
         }];
     }

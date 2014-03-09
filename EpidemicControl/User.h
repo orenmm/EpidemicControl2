@@ -20,6 +20,6 @@ typedef void(^APIReturnsDictionary)(NSDictionary *data);
 
 -(void)registerUser:(APIReturnsDictionary)completionBlock;
 
-
++(void)userLoginWithEmail:(NSString*)email andPassword:(NSString *)pass :(APIReturnsDictionary)completionBlock;
 
 @end

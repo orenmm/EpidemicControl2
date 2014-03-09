@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "User.h"
 
 @interface ViewController ()
 
@@ -63,9 +64,23 @@
 
 
 - (IBAction)login:(id)sender {
-    if ((self.emailField.text.length>0) && (self.passwordField.text.length>0))
+    NSString * email = self.emailField.text;
+    NSString * password = self.passwordField.text;
+    if ((email.length>0) && (password.length>0))
     {
-        [self performSegueWithIdentifier:@"Login" sender:self];
+        [User userLoginWithEmail:email andPassword:password :^(NSDictionary* dictionary){
+            if(dictionary[@"error"])
+            {
+                //self.errorTextField.text=dictionary[@"error"];
+                //self.errorTextField.hidden = NO;
+            }
+            else
+            {
+                User *user = [[User alloc]initWithFirstName:dictionary[@"first_name"] lastName:dictionary[@"last_name"] email:dictionary[@"email"] pass:dictionary[@"password"]];
+                [self performSegueWithIdentifier:@"Login" sender:user];
+            }
+        } ];
+        
     }
     
 }
