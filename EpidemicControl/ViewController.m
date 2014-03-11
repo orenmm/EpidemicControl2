@@ -14,16 +14,23 @@
 @end
 
 @implementation ViewController
+{
+    
+    AppData* appData;
+}
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+    
    
 }
 
 - (void)viewWillAppear:(BOOL)animated
 {
+    // initial appData object
+    appData = [AppData shareInstance];
     //hide the navigation top bar
     self.navigationController.navigationBar.hidden = YES;
     self.loginButton.userInteractionEnabled = YES;
@@ -82,6 +89,7 @@
             {
                 User *user = [[User alloc]initWithFirstName:dictionary[@"first_name"] lastName:dictionary[@"last_name"] email:dictionary[@"email"] pass:dictionary[@"password"]];
                 user.userId=[dictionary[@"id"] integerValue];
+                appData.user = user;
                 [self performSegueWithIdentifier:@"Login" sender:user];
             }
         } ];

@@ -13,6 +13,10 @@
 @end
 
 @implementation RegisterViewController
+{
+    AppData *appData;
+}
+
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -38,6 +42,9 @@
 
 - (void)viewWillAppear:(BOOL)animated
 {
+    //initiate appdata;
+    appData = [AppData shareInstance];
+    
     //hide the navigation top bar
     self.navigationController.navigationBar.hidden = NO;
 }
@@ -89,6 +96,9 @@
                 }
                 else
                 {
+                    user.password = dictionary[@"password"];
+                    user.userId = [dictionary[@"id"] integerValue];
+                    appData.user = user;
                     [self performSegueWithIdentifier:@"RegisterToMap" sender:user];
                 }
             }];
