@@ -10,8 +10,9 @@
 
 @implementation Infection
 
-
--(void)addInfection:(APIReturnsDictionary)completionBlock{
+//add infection to the server(DataBase) - we don't need a block for that but we are using the AFNetworking.
+// When using this we need to first init an infection object, give it all the properties needed here (from  the controller) and then use this function.
+-(void)addInfection{
     AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
     manager.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"text/html", nil];
     NSDictionary *parameters = @{@"user_id": @(self.userId), @"virus_id":@(self.virusID), @"location_lat":@(self.latCord), @"location_lng":@(self.longCord),@"location_name":self.locationName, @"quantity":@(self.quantity),@"infection_date":self.date};
@@ -20,8 +21,7 @@
         
         NSLog(@"JSON: %@", responseObject);
         
-        completionBlock(responseObject);
-        
+            
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
         
         NSLog(@"Error: %@", error);
@@ -34,6 +34,7 @@
 
 }
 
+//we will use this in the LoctionMapViewController , ATTTENTIOIN- the block returns array of infections :)
 +(void)getInfections:(APIReturnsArray)completionBlock {
     AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
     manager.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"text/html", nil];
@@ -43,7 +44,8 @@
         
         NSLog(@"JSON: %@", responseObject);
         
-        completionBlock(responseObject);
+        NSArray *infections = [Infection fromArray:responseObject];
+        completionBlock(infections);
         
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
         
@@ -58,7 +60,7 @@
 }
 
 
-
+//for easier life  we added this  2 functions
 +(Infection*)fromDictionary:(NSDictionary*)dictionary{
     Infection* infection = [[Infection alloc]init];
     infection.infectionId = [dictionary[@"id"] integerValue];

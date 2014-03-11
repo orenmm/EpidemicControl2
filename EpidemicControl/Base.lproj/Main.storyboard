@@ -175,10 +175,10 @@
             </objects>
             <point key="canvasLocation" x="-8" y="452"/>
         </scene>
-        <!--Add Infection View Controller-->
+        <!--Add Infected View Controller-->
         <scene sceneID="3As-Oa-dgh">
             <objects>
-                <viewController id="BQp-9E-9V3" customClass="addInfectionViewController" sceneMemberID="viewController">
+                <viewController id="BQp-9E-9V3" customClass="AddInfectedViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="rbi-kU-DAf">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -219,21 +219,11 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </prototypes>
-                                <connections>
-                                    <outlet property="dataSource" destination="BQp-9E-9V3" id="3Kv-sK-cNE"/>
-                                    <outlet property="delegate" destination="BQp-9E-9V3" id="2sx-WF-bPr"/>
-                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="yXj-ZR-p0Y"/>
-                    <connections>
-                        <outlet property="cellforInfection" destination="KDb-ep-iYU" id="qzS-A8-cgQ"/>
-                        <outlet property="locationField" destination="9TZ-nO-ZH0" id="STB-jg-fIO"/>
-                        <outlet property="stepper" destination="nlN-cj-22h" id="dTO-HS-CKW"/>
-                        <outlet property="table" destination="jSR-cY-w6q" id="ZFO-gx-t9F"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3mf-1o-rOd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

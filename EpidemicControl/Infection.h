@@ -31,7 +31,7 @@ typedef void(^APIReturnsint)(int infection_id);
 
 
 +(void)getInfections:(APIReturnsArray)completionBlock;
--(void)addInfection:(APIReturnsDictionary)completionBlock;
+-(void)addInfection;
 
 +(Infection*)fromDictionary:(NSDictionary*)dictionary;
 +(NSArray*)fromArray:(NSArray*)array;

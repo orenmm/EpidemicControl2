@@ -17,6 +17,9 @@ static AppData* instance;
     if(instance == nil)
     {
         instance = [[AppData alloc] init];
+        [Virus getViruses:^(NSArray* array){
+            instance.viruses = array;
+        }];
     }
     return instance;
 }

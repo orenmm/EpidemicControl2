@@ -1,18 +1,18 @@
 //
-//  addInfectionViewController.m
+//  AddInfectedViewController.m
 //  EpidemicControl
 //
-//  Created by Oren Mor on 3/11/14.
+//  Created by Dan Galila on 3/11/14.
 //  Copyright (c) 2014 EpidemicControl. All rights reserved.
 //
 
-#import "addInfectionViewController.h"
+#import "AddInfectedViewController.h"
 
-@interface addInfectionViewController ()
+@interface AddInfectedViewController ()
 
 @end
 
-@implementation addInfectionViewController
+@implementation AddInfectedViewController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -27,7 +27,6 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
-    
 }
 
 - (void)didReceiveMemoryWarning
@@ -37,9 +36,12 @@
 }
 
 
+
+
+
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
     
-   return 5;
+    return 5;
 }
 
 
@@ -48,7 +50,7 @@
     
     UITableViewCell *cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:@"disease"];
     return cell;
-
+    
 }
 
 
@@ -57,6 +59,7 @@
 {
     return 30.0;
 }
+
 
 
 

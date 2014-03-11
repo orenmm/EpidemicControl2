@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "User.h"
+#import "Virus.h"
 @interface AppData : NSObject
 
 @property (nonatomic,strong) User* user;

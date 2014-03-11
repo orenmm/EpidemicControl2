@@ -28,4 +28,31 @@
     return result;
     
 }
+
++(void)getViruses:(APIReturnsArray)completionBlock{
+    AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
+    manager.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"text/html", nil];
+    NSDictionary *parameters = @{};
+    [manager POST:@"http://70.32.106.118/doctors/rest/infection/getInfections.php" parameters:parameters success:^(AFHTTPRequestOperation *operation, id responseObject) {
+        
+        
+        NSLog(@"JSON: %@", responseObject);
+        
+        NSArray *viruses = [Virus fromArray:responseObject];
+        completionBlock(viruses);
+        
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        
+        NSLog(@"Error: %@", error);
+        
+        
+        
+    }];
+    
+    
+    
+
+    
+}
+
 @end

@@ -7,6 +7,11 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "AFNetworking.h"
+
+
+typedef void(^APIReturnsArray)(NSArray *data);
+typedef void(^APIReturnsDictionary)(NSDictionary *data);
 
 @interface Virus : NSObject
 
@@ -16,4 +21,6 @@
 
 +(Virus*)fromDictionary:(NSDictionary*)dictionary;
 +(NSArray*)fromArray:(NSArray*)array;
+
++(void)getViruses:(APIReturnsArray)completionBlock;
 @end
