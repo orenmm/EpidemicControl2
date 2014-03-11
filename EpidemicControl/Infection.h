@@ -18,15 +18,21 @@ typedef void(^APIReturnsint)(int infection_id);
 
 @interface Infection : NSObject
 
-@property (nonatomic,strong) NSString* userName;
-@property (nonatomic,strong) NSString* virusID;
-@property (nonatomic,strong) NSString* latCord;
-@property (nonatomic,strong) NSString* longCord;
+@property int infectionId;
+@property int userId;
+@property int virusID;
+@property CGFloat latCord;
+@property CGFloat longCord;
 @property (nonatomic,strong) NSString* locationName;
-@property (nonatomic,strong) NSString* quantity;
+@property int quantity;
 @property (nonatomic,strong) NSString* date;
+@property (nonatomic,strong) NSString* firstName;
+@property (nonatomic,strong) NSString* lastName;
 
--(id)initWithUserName:(NSString*)userName VirusId:(NSString*)virusId latCord:(NSString*)latcord longCord:(NSString*)longCord locationName:(NSString*)locationName quantity:(NSString*)quantity date:(NSString*)date;
+
++(void)getInfections:(APIReturnsArray)completionBlock;
 -(void)addInfection:(APIReturnsDictionary)completionBlock;
 
++(Infection*)fromDictionary:(NSDictionary*)dictionary;
++(NSArray*)fromArray:(NSArray*)array;
 @end
