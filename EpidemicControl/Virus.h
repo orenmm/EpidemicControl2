@@ -15,7 +15,7 @@ typedef void(^APIReturnsDictionary)(NSDictionary *data);
 
 @interface Virus : NSObject
 
-@property int Virusid;
+@property int virusid;
 @property (nonatomic,strong) NSString* name;
 @property (nonatomic,strong) NSString* icon;
 
