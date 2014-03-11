@@ -42,7 +42,7 @@
     self.navigationController.navigationBar.hidden = NO;
 }
 
-- (IBAction)register:(id)sender {
+- (IBAction)registerDoctor:(id)sender {
     NSString * firstName = self.firstNameTextField.text;
     NSString * lastName = self.lastNameTextDField.text;
     NSString * email = self.emailTextField.text;

@@ -16,6 +16,6 @@
 @property (weak, nonatomic) IBOutlet UITextField *passwordTextField;
 @property (weak, nonatomic) IBOutlet UILabel *errorTextField;
 
-- (IBAction)register:(id)sender;
+- (IBAction)registerDoctor:(id)sender;
 
 @end
