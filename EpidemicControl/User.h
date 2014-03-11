@@ -11,6 +11,7 @@
 typedef void(^APIReturnsArray)(NSArray *data);
 typedef void(^APIReturnsDictionary)(NSDictionary *data);
 @interface User : NSObject
+@property int userId;
 @property (nonatomic,strong) NSString* firstName;
 @property (nonatomic,strong) NSString* lastName;
 @property (nonatomic,strong) NSString * email;

@@ -80,6 +80,7 @@
             else
             {
                 User *user = [[User alloc]initWithFirstName:dictionary[@"first_name"] lastName:dictionary[@"last_name"] email:dictionary[@"email"] pass:dictionary[@"password"]];
+                user.userId=[dictionary[@"id"] integerValue];
                 [self performSegueWithIdentifier:@"Login" sender:user];
             }
         } ];

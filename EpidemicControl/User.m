@@ -31,7 +31,7 @@
     
 
         NSLog(@"JSON: %@", responseObject);
-        
+        self.userId=[responseObject[@"id"] integerValue];
         completionBlock(responseObject);
         
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
@@ -54,7 +54,6 @@
     [manager POST:@"http://70.32.106.118/doctors/rest/user/login.php" parameters:parameters success:^(AFHTTPRequestOperation *operation, id responseObject) {
                 
         NSLog(@"JSON: %@", responseObject);
-        
         completionBlock(responseObject);
         
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
