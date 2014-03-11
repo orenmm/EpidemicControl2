@@ -37,6 +37,7 @@
 		22D80D9E18C8F7D5003D84A4 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22D80D8018C8F7D5003D84A4 /* UIKit.framework */; };
 		22D80DA618C8F7D5003D84A4 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 22D80DA418C8F7D5003D84A4 /* InfoPlist.strings */; };
 		22D80DA818C8F7D5003D84A4 /* EpidemicControlTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 22D80DA718C8F7D5003D84A4 /* EpidemicControlTests.m */; };
+		22EF374618CF17550092AE3E /* addInfectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22EF374518CF17550092AE3E /* addInfectionViewController.m */; };
 		78CD63A318CC8093002CCBE5 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 78CD63A218CC8093002CCBE5 /* User.m */; };
 		78CD63A718CC8776002CCBE5 /* RegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 78CD63A618CC8776002CCBE5 /* RegisterViewController.m */; };
 		78CD63AA18CC94A7002CCBE5 /* Infection.m in Sources */ = {isa = PBXBuildFile; fileRef = 78CD63A918CC94A7002CCBE5 /* Infection.m */; };
@@ -89,6 +90,8 @@
 		22D80DA318C8F7D5003D84A4 /* EpidemicControlTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "EpidemicControlTests-Info.plist"; sourceTree = "<group>"; };
 		22D80DA518C8F7D5003D84A4 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		22D80DA718C8F7D5003D84A4 /* EpidemicControlTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EpidemicControlTests.m; sourceTree = "<group>"; };
+		22EF374418CF17550092AE3E /* addInfectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = addInfectionViewController.h; sourceTree = "<group>"; };
+		22EF374518CF17550092AE3E /* addInfectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = addInfectionViewController.m; sourceTree = "<group>"; };
 		678B04442FB74581AAE2E43F /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		6DEFFB0B5C1F4ED3B6B1AAC7 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 		78CD63A118CC8093002CCBE5 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
@@ -197,6 +200,8 @@
 				22D80D8318C8F7D5003D84A4 /* Supporting Files */,
 				78CD63A518CC8776002CCBE5 /* RegisterViewController.h */,
 				78CD63A618CC8776002CCBE5 /* RegisterViewController.m */,
+				22EF374418CF17550092AE3E /* addInfectionViewController.h */,
+				22EF374518CF17550092AE3E /* addInfectionViewController.m */,
 			);
 			path = EpidemicControl;
 			sourceTree = "<group>";
@@ -390,6 +395,7 @@
 				78CD63A718CC8776002CCBE5 /* RegisterViewController.m in Sources */,
 				78CD63AA18CC94A7002CCBE5 /* Infection.m in Sources */,
 				22D80D8918C8F7D5003D84A4 /* main.m in Sources */,
+				22EF374618CF17550092AE3E /* addInfectionViewController.m in Sources */,
 				224285F318C922A40099E8D7 /* LocationMapViewViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
