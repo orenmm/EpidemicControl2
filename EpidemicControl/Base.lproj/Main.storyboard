@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4514" systemVersion="13C64" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="XHC-3l-X8c">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4514" systemVersion="13A3028" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="XHC-3l-X8c">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3747"/>
     </dependencies>
@@ -64,6 +64,13 @@
                                     <segue destination="QdJ-Gk-XqC" kind="push" id="keC-uw-mom"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="hk0-eR-c1l">
+                                <rect key="frame" x="46" y="189" width="229" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
@@ -71,6 +78,7 @@
                     <nil key="simulatedTopBarMetrics"/>
                     <connections>
                         <outlet property="emailField" destination="G75-NN-YEJ" id="c56-AT-fEP"/>
+                        <outlet property="errorLogin" destination="hk0-eR-c1l" id="CLT-DP-1TS"/>
                         <outlet property="loginButton" destination="dpW-VO-hMd" id="eRX-jr-ZUr"/>
                         <outlet property="passwordField" destination="0K0-e9-3cg" id="jmW-ua-Q35"/>
                         <segue destination="gRL-5l-9eT" kind="push" identifier="Login" id="dtU-4K-uoq"/>
@@ -359,6 +367,6 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="vgJ-rV-piE"/>
+        <segue reference="dtU-4K-uoq"/>
     </inferredMetricsTieBreakers>
 </document>
