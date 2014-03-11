@@ -9,7 +9,7 @@
 #import "ViewController.h"
 #import "User.h"
 
-@interface RegisterViewController : ViewController
+@interface RegisterViewController : ViewController <UITextFieldDelegate>
 @property (weak, nonatomic) IBOutlet UITextField *firstNameTextField;
 @property (weak, nonatomic) IBOutlet UITextField *lastNameTextDField;
 @property (weak, nonatomic) IBOutlet UITextField *emailTextField;
