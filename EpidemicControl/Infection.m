@@ -21,7 +21,7 @@
         
         NSLog(@"JSON: %@", responseObject);
         
-            
+        
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
         
         NSLog(@"Error: %@", error);
@@ -33,6 +33,11 @@
 
 
 }
+
+-(void)setVirusID:(int)virusID {
+    _virusID = _virus.virusid;
+}
+
 
 //we will use this in the LoctionMapViewController , ATTTENTIOIN- the block returns array of infections :)
 +(void)getInfections:(APIReturnsArray)completionBlock {

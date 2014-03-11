@@ -12,7 +12,7 @@
 
 +(Virus*)fromDictionary:(NSDictionary*)dictionary{
     Virus* virus = [[Virus alloc]init];
-    virus.Virusid =[dictionary[@"id"] integerValue];
+    virus.virusid =[dictionary[@"id"] integerValue];
     virus.name =dictionary[@"name"];
     virus.icon =dictionary[@"icon"];
 

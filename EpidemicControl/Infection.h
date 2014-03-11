@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "AFNetworking.h"
+#import "Virus.h"
 
 
 typedef void(^APIReturnsArray)(NSArray *data);
@@ -20,7 +21,7 @@ typedef void(^APIReturnsint)(int infection_id);
 
 @property int infectionId;
 @property int userId;
-@property int virusID;
+@property (nonatomic) int virusID;
 @property CGFloat latCord;
 @property CGFloat longCord;
 @property (nonatomic,strong) NSString* locationName;
@@ -29,6 +30,7 @@ typedef void(^APIReturnsint)(int infection_id);
 @property (nonatomic,strong) NSString* firstName;
 @property (nonatomic,strong) NSString* lastName;
 
+@property (nonatomic,strong) Virus* virus;
 
 +(void)getInfections:(APIReturnsArray)completionBlock;
 -(void)addInfection;
