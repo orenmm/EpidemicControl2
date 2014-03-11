@@ -37,12 +37,8 @@
 		22D80D9E18C8F7D5003D84A4 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22D80D8018C8F7D5003D84A4 /* UIKit.framework */; };
 		22D80DA618C8F7D5003D84A4 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 22D80DA418C8F7D5003D84A4 /* InfoPlist.strings */; };
 		22D80DA818C8F7D5003D84A4 /* EpidemicControlTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 22D80DA718C8F7D5003D84A4 /* EpidemicControlTests.m */; };
-<<<<<<< HEAD
 		780C513218CF1AD000C9A362 /* AppData.m in Sources */ = {isa = PBXBuildFile; fileRef = 780C513118CF1AD000C9A362 /* AppData.m */; };
 		780C513518CF1C7300C9A362 /* Virus.m in Sources */ = {isa = PBXBuildFile; fileRef = 780C513418CF1C7300C9A362 /* Virus.m */; };
-=======
-		22EF374618CF17550092AE3E /* addInfectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22EF374518CF17550092AE3E /* addInfectionViewController.m */; };
->>>>>>> df6c507530a28a52d53693226333be0a3d9cd0ee
 		78CD63A318CC8093002CCBE5 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 78CD63A218CC8093002CCBE5 /* User.m */; };
 		78CD63A718CC8776002CCBE5 /* RegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 78CD63A618CC8776002CCBE5 /* RegisterViewController.m */; };
 		78CD63AA18CC94A7002CCBE5 /* Infection.m in Sources */ = {isa = PBXBuildFile; fileRef = 78CD63A918CC94A7002CCBE5 /* Infection.m */; };
