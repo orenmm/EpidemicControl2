@@ -26,6 +26,7 @@
 {
     //hide the navigation top bar
     self.navigationController.navigationBar.hidden = YES;
+    self.loginButton.userInteractionEnabled = YES;
 }
 
 
@@ -68,11 +69,13 @@
     NSString * password = self.passwordField.text;
     if ((email.length>0) && (password.length>0))
     {
+        self.loginButton.userInteractionEnabled = NO;
         [User userLoginWithEmail:email andPassword:password :^(NSDictionary* dictionary){
             if(dictionary[@"error"])
             {
                 //self.errorTextField.text=dictionary[@"error"];
                 //self.errorTextField.hidden = NO;
+                self.loginButton.userInteractionEnabled = YES;
             }
             else
             {

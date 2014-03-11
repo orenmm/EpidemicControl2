@@ -15,6 +15,7 @@
 		224285F318C922A40099E8D7 /* LocationMapViewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 224285F218C922A40099E8D7 /* LocationMapViewViewController.m */; };
 		224285F518C9235B0099E8D7 /* epidemic_c_login.png in Resources */ = {isa = PBXBuildFile; fileRef = 224285F418C9235B0099E8D7 /* epidemic_c_login.png */; };
 		2263FD9218CA3E7200C70C72 /* textfield.png in Resources */ = {isa = PBXBuildFile; fileRef = 2263FD9118CA3E7200C70C72 /* textfield.png */; };
+		2291408A18CCAE7C004DE2BB /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 2291408918CCAE7C004DE2BB /* .gitignore */; };
 		229304E718C9E2E2008AEDCC /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 229304E618C9E2E2008AEDCC /* MapKit.framework */; };
 		229304E918C9E2F0008AEDCC /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 229304E818C9E2F0008AEDCC /* CoreLocation.framework */; };
 		229304EB18C9E799008AEDCC /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 229304EA18C9E799008AEDCC /* QuartzCore.framework */; };
@@ -60,6 +61,7 @@
 		224285F218C922A40099E8D7 /* LocationMapViewViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationMapViewViewController.m; sourceTree = "<group>"; };
 		224285F418C9235B0099E8D7 /* epidemic_c_login.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = epidemic_c_login.png; sourceTree = "<group>"; };
 		2263FD9118CA3E7200C70C72 /* textfield.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = textfield.png; sourceTree = "<group>"; };
+		2291408918CCAE7C004DE2BB /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		229304E618C9E2E2008AEDCC /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		229304E818C9E2F0008AEDCC /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		229304EA18C9E799008AEDCC /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
@@ -143,6 +145,7 @@
 		22D80D7018C8F7D4003D84A4 = {
 			isa = PBXGroup;
 			children = (
+				2291408918CCAE7C004DE2BB /* .gitignore */,
 				2224161A18CC7DA10017903C /* Podfile */,
 				2224161618CC76B00017903C /* Default-568h@2x.png */,
 				22D80D8218C8F7D5003D84A4 /* EpidemicControl */,
@@ -327,6 +330,7 @@
 				22D80D9018C8F7D5003D84A4 /* Main.storyboard in Resources */,
 				224285EE18C919170099E8D7 /* epidemic_c_login1.png in Resources */,
 				2263FD9218CA3E7200C70C72 /* textfield.png in Resources */,
+				2291408A18CCAE7C004DE2BB /* .gitignore in Resources */,
 				229304F018C9EBE5008AEDCC /* pin1.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
