@@ -9,5 +9,11 @@
 #import <UIKit/UIKit.h>
 
 @interface AddInfectedViewController : UIViewController
+@property (weak, nonatomic) IBOutlet UITableViewCell *cell;
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
+@property (weak, nonatomic) IBOutlet UILabel *location;
+@property (weak, nonatomic) IBOutlet UITextField *dateTextField;
+@property (weak, nonatomic) IBOutlet UIStepper *stepper;
+- (IBAction)addToServer:(id)sender;
 
 @end
