@@ -65,6 +65,7 @@
 
 
 - (IBAction)login:(id)sender {
+    self.errorLogin.hidden = YES;
     NSString * email = self.emailField.text;
     NSString * password = self.passwordField.text;
     if ((email.length>0) && (password.length>0))
@@ -73,8 +74,8 @@
         [User userLoginWithEmail:email andPassword:password :^(NSDictionary* dictionary){
             if(dictionary[@"error"])
             {
-                //self.errorTextField.text=dictionary[@"error"];
-                //self.errorTextField.hidden = NO;
+                self.errorLogin.text = dictionary[@"error"];
+                self.errorLogin.hidden = NO;
                 self.loginButton.userInteractionEnabled = YES;
             }
             else
@@ -85,6 +86,11 @@
             }
         } ];
         
+    }
+    else
+    {
+        self.errorLogin.text = @"Please Fill All The Fields";
+        self.errorLogin.hidden = NO;
     }
     
 }
