@@ -83,10 +83,10 @@
         markerBtn.enabled = YES;
         markerBtn.userInteractionEnabled = YES;
         //[markerBtn setTitle:@"" forState:UIControlStateNormal];
-        view.rightCalloutAccessoryView = markerBtn;
+        /*view.rightCalloutAccessoryView = markerBtn;
         view.canShowCallout=YES;
-        view.enabled = YES;
-        //[view addSubview:markerBtn];
+        view.enabled = YES;*/
+        [view addSubview:markerBtn];
         /*  **** *********************** ***** */
     }
     else
