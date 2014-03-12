@@ -11,6 +11,13 @@
 		2224161518CC72970017903C /* spalshForEC960.png in Resources */ = {isa = PBXBuildFile; fileRef = 2224161418CC72970017903C /* spalshForEC960.png */; };
 		2224161718CC76B00017903C /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2224161618CC76B00017903C /* Default-568h@2x.png */; };
 		2224161B18CC7DA10017903C /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 2224161A18CC7DA10017903C /* Podfile */; };
+		22362C8318D0747600A30E09 /* virus01.png in Resources */ = {isa = PBXBuildFile; fileRef = 22362C7C18D0747600A30E09 /* virus01.png */; };
+		22362C8418D0747600A30E09 /* virus02.png in Resources */ = {isa = PBXBuildFile; fileRef = 22362C7D18D0747600A30E09 /* virus02.png */; };
+		22362C8518D0747600A30E09 /* virus03.png in Resources */ = {isa = PBXBuildFile; fileRef = 22362C7E18D0747600A30E09 /* virus03.png */; };
+		22362C8618D0747600A30E09 /* virus04.png in Resources */ = {isa = PBXBuildFile; fileRef = 22362C7F18D0747600A30E09 /* virus04.png */; };
+		22362C8718D0747600A30E09 /* virus05.png in Resources */ = {isa = PBXBuildFile; fileRef = 22362C8018D0747600A30E09 /* virus05.png */; };
+		22362C8818D0747600A30E09 /* virus06.png in Resources */ = {isa = PBXBuildFile; fileRef = 22362C8118D0747600A30E09 /* virus06.png */; };
+		22362C8918D0747600A30E09 /* virus07.png in Resources */ = {isa = PBXBuildFile; fileRef = 22362C8218D0747600A30E09 /* virus07.png */; };
 		224285EE18C919170099E8D7 /* epidemic_c_login1.png in Resources */ = {isa = PBXBuildFile; fileRef = 224285ED18C919170099E8D7 /* epidemic_c_login1.png */; };
 		224285F318C922A40099E8D7 /* LocationMapViewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 224285F218C922A40099E8D7 /* LocationMapViewViewController.m */; };
 		224285F518C9235B0099E8D7 /* epidemic_c_login.png in Resources */ = {isa = PBXBuildFile; fileRef = 224285F418C9235B0099E8D7 /* epidemic_c_login.png */; };
@@ -60,6 +67,13 @@
 		2224161418CC72970017903C /* spalshForEC960.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = spalshForEC960.png; sourceTree = "<group>"; };
 		2224161618CC76B00017903C /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		2224161A18CC7DA10017903C /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
+		22362C7C18D0747600A30E09 /* virus01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = virus01.png; sourceTree = "<group>"; };
+		22362C7D18D0747600A30E09 /* virus02.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = virus02.png; sourceTree = "<group>"; };
+		22362C7E18D0747600A30E09 /* virus03.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = virus03.png; sourceTree = "<group>"; };
+		22362C7F18D0747600A30E09 /* virus04.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = virus04.png; sourceTree = "<group>"; };
+		22362C8018D0747600A30E09 /* virus05.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = virus05.png; sourceTree = "<group>"; };
+		22362C8118D0747600A30E09 /* virus06.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = virus06.png; sourceTree = "<group>"; };
+		22362C8218D0747600A30E09 /* virus07.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = virus07.png; sourceTree = "<group>"; };
 		224285ED18C919170099E8D7 /* epidemic_c_login1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = epidemic_c_login1.png; sourceTree = "<group>"; };
 		224285F118C922A40099E8D7 /* LocationMapViewViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocationMapViewViewController.h; sourceTree = "<group>"; };
 		224285F218C922A40099E8D7 /* LocationMapViewViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationMapViewViewController.m; sourceTree = "<group>"; };
@@ -141,6 +155,13 @@
 		229304F118C9EBF2008AEDCC /* images */ = {
 			isa = PBXGroup;
 			children = (
+				22362C7C18D0747600A30E09 /* virus01.png */,
+				22362C7D18D0747600A30E09 /* virus02.png */,
+				22362C7E18D0747600A30E09 /* virus03.png */,
+				22362C7F18D0747600A30E09 /* virus04.png */,
+				22362C8018D0747600A30E09 /* virus05.png */,
+				22362C8118D0747600A30E09 /* virus06.png */,
+				22362C8218D0747600A30E09 /* virus07.png */,
 				22A0C9F618CF4CBB00B22EE7 /* epidemic_control_register.png */,
 				2224161418CC72970017903C /* spalshForEC960.png */,
 				229F17BD18CA67120051A435 /* search_icon.png */,
@@ -338,6 +359,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				22A0C9F718CF4CBB00B22EE7 /* epidemic_control_register.png in Resources */,
+				22362C8618D0747600A30E09 /* virus04.png in Resources */,
 				229304F718C9F546008AEDCC /* pen+paper.png in Resources */,
 				2224161718CC76B00017903C /* Default-568h@2x.png in Resources */,
 				22D80D8718C8F7D5003D84A4 /* InfoPlist.strings in Resources */,
@@ -346,11 +368,17 @@
 				229F17BE18CA67120051A435 /* search_icon.png in Resources */,
 				2224161B18CC7DA10017903C /* Podfile in Resources */,
 				229304F918C9FD9C008AEDCC /* spalshForEC.png in Resources */,
+				22362C8418D0747600A30E09 /* virus02.png in Resources */,
 				22D80D9018C8F7D5003D84A4 /* Main.storyboard in Resources */,
 				224285EE18C919170099E8D7 /* epidemic_c_login1.png in Resources */,
+				22362C8818D0747600A30E09 /* virus06.png in Resources */,
 				2263FD9218CA3E7200C70C72 /* textfield.png in Resources */,
 				2291408A18CCAE7C004DE2BB /* .gitignore in Resources */,
+				22362C8518D0747600A30E09 /* virus03.png in Resources */,
+				22362C8318D0747600A30E09 /* virus01.png in Resources */,
 				229304F018C9EBE5008AEDCC /* pin1.png in Resources */,
+				22362C8918D0747600A30E09 /* virus07.png in Resources */,
+				22362C8718D0747600A30E09 /* virus05.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
