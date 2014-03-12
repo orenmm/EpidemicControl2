@@ -7,6 +7,7 @@
 //
 
 #import "AddInfectedViewController.h"
+#import "VirusCell.h"
 
 @interface AddInfectedViewController ()
 
@@ -51,7 +52,10 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     
-    UITableViewCell *cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:@"disease"];
+    VirusCell *cell = [tableView dequeueReusableCellWithIdentifier:@"virusCell"];
+    Virus* virus =appData.viruses[indexPath.row];
+    cell.textLabel.text =virus.name;
+    cell.imageView.image=[UIImage imageNamed:virus.icon];
     return cell;
     
 }
