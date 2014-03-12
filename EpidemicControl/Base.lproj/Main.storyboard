@@ -243,6 +243,10 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="BQp-9E-9V3" id="FWP-lQ-I2P"/>
+                                    <outlet property="delegate" destination="BQp-9E-9V3" id="VnF-dZ-fwZ"/>
+                                </connections>
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="APM-hT-hXp">
                                 <rect key="frame" x="113" y="483" width="94" height="30"/>
