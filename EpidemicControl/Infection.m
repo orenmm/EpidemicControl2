@@ -71,6 +71,8 @@
     infection.infectionId = [dictionary[@"id"] integerValue];
     infection.userId = [dictionary[@"user_id"] integerValue];
     infection.virusID = [dictionary[@"virus_id"] integerValue];
+     AppData *appData =[AppData shareInstance];
+    infection.virus = [appData getVirusFromVirusId:infection.virusID];
     infection.latCord = [dictionary[@"location_lat"] floatValue];
     infection.longCord = [dictionary[@"location_lng"] floatValue];
     infection.locationName = dictionary[@"location_name"] ;

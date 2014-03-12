@@ -14,6 +14,6 @@
 @property (nonatomic,strong) User* user;
 @property (nonatomic,strong) NSArray* viruses;
 +(AppData*)shareInstance;
-
+-(Virus*)getVirusFromVirusId:(int)virusId;
 
 @end
