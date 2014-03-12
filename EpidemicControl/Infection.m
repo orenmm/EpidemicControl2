@@ -10,6 +10,8 @@
 
 @implementation Infection
 
+
+
 //add infection to the server(DataBase) - we don't need a block for that but we are using the AFNetworking.
 // When using this we need to first init an infection object, give it all the properties needed here (from  the controller) and then use this function.
 -(void)addInfection{
@@ -34,9 +36,7 @@
 
 }
 
--(void)setVirusID:(int)virusID {
-    _virusID = _virus.virusid;
-}
+
 
 
 //we will use this in the LoctionMapViewController , ATTTENTIOIN- the block returns array of infections :)

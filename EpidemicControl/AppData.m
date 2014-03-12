@@ -30,5 +30,22 @@ static AppData* instance;
     return self;
 }
 
+//-(Virus*)getVirusFromId:(int)virusId{
+//    
+//    for (Virus *virus in instance.viruses)
+//    {
+//        if (virusId==virus.virusid)
+//        {
+//            return virus;
+//        }
+//        else
+//        {
+//            Virus *virus2 = [[Virus alloc]init];
+//            return virus2;
+//            
+//        }
+//        
+//    }
+//}
 
 @end

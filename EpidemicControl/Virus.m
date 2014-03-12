@@ -29,11 +29,12 @@
     
 }
 
+//return an array of viruses availible in the database(server)
 +(void)getViruses:(APIReturnsArray)completionBlock{
     AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
     manager.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"text/html", nil];
     NSDictionary *parameters = @{};
-    [manager POST:@"http://70.32.106.118/doctors/rest/infection/getInfections.php" parameters:parameters success:^(AFHTTPRequestOperation *operation, id responseObject) {
+    [manager POST:@"http://70.32.106.118/doctors/rest/virus/getViri.php" parameters:parameters success:^(AFHTTPRequestOperation *operation, id responseObject) {
         
         
         NSLog(@"JSON: %@", responseObject);

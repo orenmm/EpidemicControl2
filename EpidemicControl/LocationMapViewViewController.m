@@ -8,12 +8,15 @@
 
 #import "LocationMapViewViewController.h"
 #import "markerOnMap.h"
-
+#import "Infection.h"
 @interface LocationMapViewViewController ()
 
 @end
 
 @implementation LocationMapViewViewController
+{
+    NSMutableArray *markers;
+}
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -27,18 +30,29 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view.
-    markerOnMap *marker1 = [[markerOnMap alloc]initWithcoordinates:CLLocationCoordinate2DMake(0.2, 0) name:@"first place"];
-    marker1.imageName = @"pin1";
-    markerOnMap *marker2 = [[markerOnMap alloc]initWithcoordinates:CLLocationCoordinate2DMake(0.4, 0) name:@"second place"];
-    marker2.imageName = @"pin2";
-    [self.map addAnnotations:@[marker1, marker2]];
-    self.map.layer.cornerRadius = 150;
+	
+    markers= [[NSMutableArray alloc]init];
+    self.map.layer.cornerRadius = self.map.frame.size.width/2;
     self.map.clipsToBounds = YES;
 
 }
+
+
 -(void)viewWillAppear:(BOOL)animated{
+    //SHOW the navigation top bar
+    self.navigationController.navigationBar.hidden = NO;
     
+    //everytime this controller is loaded or reloade the map should reload the infections from the database(on the server) every infection is an annotaion=markerOnMap
+    [self.map removeAnnotations:markers];
+    [Infection getInfections:^(NSArray *infections){
+        for (Infection *infection in infections) {
+            markerOnMap *markerInfection = [[markerOnMap alloc]initWithInfection:infection];
+            [markers addObject:markerInfection];
+            
+        }
+        [self.map addAnnotations:markers];
+        
+    }];
 }
 
 
@@ -76,26 +90,6 @@
 {
     [self.map setCenterCoordinate:userLocation.coordinate animated:YES];
     [self.map setRegion:MKCoordinateRegionMake(userLocation.coordinate, MKCoordinateSpanMake(0.1, 0.1))];
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-- (void)viewWillAppear:(BOOL)animated
-{
-    //SHOW the navigation top bar
-    self.navigationController.navigationBar.hidden = NO;
 }
 
 

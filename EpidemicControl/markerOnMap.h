@@ -8,14 +8,16 @@
 
 #import <Foundation/Foundation.h>
 #import <MapKit/MapKit.h>
+#import "Infection.h"
 
 @interface markerOnMap : NSObject<MKAnnotation>
 
-
+@property (nonatomic,strong) Infection* infection;
 @property (nonatomic, assign) CLLocationCoordinate2D coordinate;
 @property (nonatomic, strong) NSString *name;
 @property (nonatomic, strong) NSString *imageName;
 
--(id)initWithcoordinates: (CLLocationCoordinate2D) coords name:(NSString*)nameparam;
+//-(id)initWithcoordinates: (CLLocationCoordinate2D) coords name:(NSString*)nameparam;
+-(id)initWithInfection:(Infection*)infection;
 
 @end
