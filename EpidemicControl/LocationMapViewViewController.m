@@ -37,7 +37,6 @@
     markers= [[NSMutableArray alloc]init];
     self.map.layer.cornerRadius = self.map.frame.size.width/2;
     self.map.clipsToBounds = YES;
-
 }
 
 
@@ -72,13 +71,23 @@
         UIImageView * imageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 80, 80)];
         imageView.image = [UIImage imageNamed:marker.imageName];
         [view addSubview:imageView];
+        
+        /*  **** making a custom button ***** */
         //MarkerButton *markerBtn = [[MarkerButton alloc] initWithFrame:imageView.frame];
         MarkerButton *markerBtn = [MarkerButton buttonWithType:UIButtonTypeRoundedRect];
-        markerBtn.frame = imageView.frame;
-        markerBtn.backgroundColor = [UIColor redColor];
+        markerBtn.frame = CGRectMake(0, 0, 80, 80);//imageView.frame;
+        //[markerBtn setImage:[UIImage imageNamed:marker.imageName] forState:UIControlStateNormal];
+        //markerBtn.backgroundColor = [UIColor redColor];
         [markerBtn addTarget:self action:@selector(markerSelected:) forControlEvents:UIControlEventTouchUpInside];
-       // markerBtn.infection = marker.infection;
+        markerBtn.infection = marker.infection;
+        markerBtn.enabled = YES;
+        markerBtn.userInteractionEnabled = YES;
+        //[markerBtn setTitle:@"" forState:UIControlStateNormal];
+        /*view.rightCalloutAccessoryView = markerBtn;
+        view.canShowCallout=YES;
+        view.enabled = YES;*/
         [view addSubview:markerBtn];
+        /*  **** *********************** ***** */
     }
     else
     {
@@ -90,7 +99,13 @@
     return view;
 }
 
-
+/*-(void)mapView:(MKMapView *)mapView didSelectAnnotationView:(MKAnnotationView *)view
+{
+    //Restaurant *rest = view.annotation;
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"title"
+                                                    message:@"Clicked !" delegate:nil cancelButtonTitle:@"Eat" otherButtonTitles:nil];
+    [alert show];
+}*/
 
 
 //user center location + zoom (1 kilo meters)
@@ -103,20 +118,10 @@
 }
 
 
-- (void)mapView:(MKMapView *)mapView didSelectAnnotationView:(MKAnnotationView *)view
-{
-    EpidemecInfoView *epidemicView = [[EpidemecInfoView alloc]initWithFrame:CGRectMake(0, 200, 320, 230)];
-    
-    /*markerOnMap *marker = view;
-    epidemicView.reporterNameLabel.text = [NSString stringWithFormat:@"%@ %@",marker.infection.firstName, marker.infection.lastName];*/
-    [self.view addSubview:epidemicView];
-}
-
 - (IBAction)markerSelected:(id)sender
 {
-    EpidemecInfoView *epidemicView = [[EpidemecInfoView alloc]initWithFrame:CGRectMake(0, 200, 320, 230)];
-    MarkerButton *markerBtn = [[MarkerButton alloc]init];
-    markerBtn = sender;
+    EpidemecInfoView *epidemicView = [[EpidemecInfoView alloc]initWithFrame:CGRectMake(0, 200, 320, 191)];
+    MarkerButton *markerBtn = sender;//[[MarkerButton alloc]init];
     epidemicView.reporterNameLabel.text = [NSString stringWithFormat:@"%@ %@",markerBtn.infection.firstName,markerBtn.infection.lastName];
     epidemicView.virusNameLabel.text = markerBtn.infection.virus.name;
     epidemicView.locationLabel.text = markerBtn.infection.locationName;
@@ -139,18 +144,12 @@
 }
 
 
-
 -(BOOL)textFieldShouldReturn:(UITextField *)textField
 {
     [self.mapTextField becomeFirstResponder];
     [self.mapTextField resignFirstResponder];
     return YES;
 }
-
-
-
-
-
 
 
 @end
