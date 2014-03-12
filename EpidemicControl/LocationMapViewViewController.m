@@ -37,6 +37,9 @@
     self.map.clipsToBounds = YES;
 
 }
+-(void)viewWillAppear:(BOOL)animated{
+    
+}
 
 
 -(MKAnnotationView*)mapView:(MKMapView *)mapView viewForAnnotation:(id<MKAnnotation>)annotation
