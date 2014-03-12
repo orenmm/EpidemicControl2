@@ -9,6 +9,8 @@
 #import "LocationMapViewViewController.h"
 #import "markerOnMap.h"
 #import "Infection.h"
+#import "EpidemecInfoView.h"
+
 @interface LocationMapViewViewController ()
 
 @end
@@ -92,6 +94,14 @@
     [self.map setRegion:MKCoordinateRegionMake(userLocation.coordinate, MKCoordinateSpanMake(0.1, 0.1))];
 }
 
+
+- (void)mapView:(MKMapView *)mapView didSelectAnnotationView:(MKAnnotationView *)view
+{
+    EpidemecInfoView *epidemicView = [[EpidemecInfoView alloc]initWithFrame:CGRectMake(0, 200, 320, 230)];
+    /*markerOnMap *marker = view;
+    epidemicView.reporterNameLabel.text = [NSString stringWithFormat:@"%@ %@",marker.infection.firstName, marker.infection.lastName];*/
+    [self.view addSubview:epidemicView];
+}
 
 
 - (void)didReceiveMemoryWarning

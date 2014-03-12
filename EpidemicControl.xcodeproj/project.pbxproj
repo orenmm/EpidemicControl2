@@ -52,6 +52,8 @@
 		78CD63A718CC8776002CCBE5 /* RegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 78CD63A618CC8776002CCBE5 /* RegisterViewController.m */; };
 		78CD63AA18CC94A7002CCBE5 /* Infection.m in Sources */ = {isa = PBXBuildFile; fileRef = 78CD63A918CC94A7002CCBE5 /* Infection.m */; };
 		78D6747F18D091C600D66EB6 /* VirusCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 78D6747E18D091C600D66EB6 /* VirusCell.m */; };
+		F5330B8018D0CB4000DA691C /* EpidemecInfoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F5330B7F18D0CB4000DA691C /* EpidemecInfoView.xib */; };
+		F5330B8318D0CB5D00DA691C /* EpidemecInfoView.m in Sources */ = {isa = PBXBuildFile; fileRef = F5330B8218D0CB5D00DA691C /* EpidemecInfoView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -125,6 +127,9 @@
 		78CD63A918CC94A7002CCBE5 /* Infection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Infection.m; sourceTree = "<group>"; };
 		78D6747D18D091C600D66EB6 /* VirusCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VirusCell.h; sourceTree = "<group>"; };
 		78D6747E18D091C600D66EB6 /* VirusCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VirusCell.m; sourceTree = "<group>"; };
+		F5330B7F18D0CB4000DA691C /* EpidemecInfoView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EpidemecInfoView.xib; sourceTree = "<group>"; };
+		F5330B8118D0CB5D00DA691C /* EpidemecInfoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EpidemecInfoView.h; sourceTree = "<group>"; };
+		F5330B8218D0CB5D00DA691C /* EpidemecInfoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EpidemecInfoView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -237,6 +242,9 @@
 				780C513A18CF395500C9A362 /* AddInfectedViewController.m */,
 				78D6747D18D091C600D66EB6 /* VirusCell.h */,
 				78D6747E18D091C600D66EB6 /* VirusCell.m */,
+				F5330B8118D0CB5D00DA691C /* EpidemecInfoView.h */,
+				F5330B8218D0CB5D00DA691C /* EpidemecInfoView.m */,
+				F5330B7F18D0CB4000DA691C /* EpidemecInfoView.xib */,
 			);
 			path = EpidemicControl;
 			sourceTree = "<group>";
@@ -365,6 +373,7 @@
 			files = (
 				22A0C9F718CF4CBB00B22EE7 /* epidemic_control_register.png in Resources */,
 				22362C8618D0747600A30E09 /* virus04.png in Resources */,
+				F5330B8018D0CB4000DA691C /* EpidemecInfoView.xib in Resources */,
 				229304F718C9F546008AEDCC /* pen+paper.png in Resources */,
 				2224161718CC76B00017903C /* Default-568h@2x.png in Resources */,
 				22D80D8718C8F7D5003D84A4 /* InfoPlist.strings in Resources */,
@@ -435,6 +444,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F5330B8318D0CB5D00DA691C /* EpidemecInfoView.m in Sources */,
 				780C513218CF1AD000C9A362 /* AppData.m in Sources */,
 				22D80D9318C8F7D5003D84A4 /* ViewController.m in Sources */,
 				229304EE18C9E87F008AEDCC /* markerOnMap.m in Sources */,
