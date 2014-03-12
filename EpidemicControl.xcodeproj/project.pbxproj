@@ -51,6 +51,7 @@
 		78CD63A318CC8093002CCBE5 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 78CD63A218CC8093002CCBE5 /* User.m */; };
 		78CD63A718CC8776002CCBE5 /* RegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 78CD63A618CC8776002CCBE5 /* RegisterViewController.m */; };
 		78CD63AA18CC94A7002CCBE5 /* Infection.m in Sources */ = {isa = PBXBuildFile; fileRef = 78CD63A918CC94A7002CCBE5 /* Infection.m */; };
+		78D6747F18D091C600D66EB6 /* VirusCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 78D6747E18D091C600D66EB6 /* VirusCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -122,6 +123,8 @@
 		78CD63A618CC8776002CCBE5 /* RegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisterViewController.m; sourceTree = "<group>"; };
 		78CD63A818CC94A7002CCBE5 /* Infection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Infection.h; sourceTree = "<group>"; };
 		78CD63A918CC94A7002CCBE5 /* Infection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Infection.m; sourceTree = "<group>"; };
+		78D6747D18D091C600D66EB6 /* VirusCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VirusCell.h; sourceTree = "<group>"; };
+		78D6747E18D091C600D66EB6 /* VirusCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VirusCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -232,6 +235,8 @@
 				78CD63A618CC8776002CCBE5 /* RegisterViewController.m */,
 				780C513918CF395500C9A362 /* AddInfectedViewController.h */,
 				780C513A18CF395500C9A362 /* AddInfectedViewController.m */,
+				78D6747D18D091C600D66EB6 /* VirusCell.h */,
+				78D6747E18D091C600D66EB6 /* VirusCell.m */,
 			);
 			path = EpidemicControl;
 			sourceTree = "<group>";
@@ -433,6 +438,7 @@
 				780C513218CF1AD000C9A362 /* AppData.m in Sources */,
 				22D80D9318C8F7D5003D84A4 /* ViewController.m in Sources */,
 				229304EE18C9E87F008AEDCC /* markerOnMap.m in Sources */,
+				78D6747F18D091C600D66EB6 /* VirusCell.m in Sources */,
 				78CD63A318CC8093002CCBE5 /* User.m in Sources */,
 				22D80D8D18C8F7D5003D84A4 /* AppDelegate.m in Sources */,
 				780C513518CF1C7300C9A362 /* Virus.m in Sources */,

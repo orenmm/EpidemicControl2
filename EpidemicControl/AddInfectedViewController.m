@@ -13,6 +13,9 @@
 @end
 
 @implementation AddInfectedViewController
+{
+    AppData* appData;
+}
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -26,6 +29,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    appData = [AppData shareInstance];
 	// Do any additional setup after loading the view.
 }
 
@@ -40,7 +44,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
     
-    return 5;
+    return appData.viruses.count;
 }
 
 
