@@ -15,5 +15,7 @@
 @property (weak, nonatomic) IBOutlet UITextField *dateTextField;
 @property (weak, nonatomic) IBOutlet UIStepper *stepper;
 - (IBAction)addToServer:(id)sender;
+@property (weak, nonatomic) IBOutlet UILabel *stepperLabel;
+- (IBAction)stepperValueChanged:(id)sender;
 
 @end

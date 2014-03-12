@@ -68,4 +68,6 @@
 
 - (IBAction)addToServer:(id)sender {
 }
+- (IBAction)stepperValueChanged:(id)sender {
+}
 @end
