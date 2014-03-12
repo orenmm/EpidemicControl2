@@ -234,10 +234,10 @@
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="KDb-ep-iYU" customClass="VirusCell">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="virusCell" id="VjH-pO-SEf" customClass="VirusCell">
                                         <rect key="frame" x="0.0" y="22" width="280" height="44"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KDb-ep-iYU" id="qCE-hE-NBX">
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="VjH-pO-SEf" id="vJA-mz-C7U">
                                             <rect key="frame" x="0.0" y="0.0" width="280" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
@@ -287,7 +287,6 @@
                     </view>
                     <navigationItem key="navigationItem" id="yXj-ZR-p0Y"/>
                     <connections>
-                        <outlet property="cell" destination="KDb-ep-iYU" id="jC6-ns-It3"/>
                         <outlet property="dateTextField" destination="2k1-wG-oJQ" id="rUI-1p-Un2"/>
                         <outlet property="location" destination="g74-se-gPz" id="zuK-Lb-b4o"/>
                         <outlet property="stepper" destination="nlN-cj-22h" id="13z-ra-d9z"/>
