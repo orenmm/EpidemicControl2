@@ -8,6 +8,7 @@
 
 #import "AddInfectedViewController.h"
 #import "VirusCell.h"
+#import "Infection.h"
 
 @interface AddInfectedViewController ()
 
@@ -33,13 +34,17 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
     appData = [AppData shareInstance];
     selectedIndexPath = 0 ;
+    //definitions for stepper
     self.stepper.minimumValue=0;
     self.stepper.maximumValue=10000;
     self.stepper.stepValue=1;
     self.stepper.wraps=NO;
     self.stepperLabel.text=[NSString stringWithFormat:@"%d",(int)self.stepper.value];
+    
+    self.dateTextField.delegate = self;
 }
 
 - (void)didReceiveMemoryWarning
@@ -108,10 +113,34 @@
 
 
 - (IBAction)addToServer:(id)sender {
+    //alloc init to infection object and then add it to server-DB using the releventfunction
+    Infection *infection = [[Infection alloc]init];
+    infection.userId=appData.user.userId;
+    Virus* virus =appData.viruses[selectedIndexPath.row];
+    infection.virusID=virus.virusid;
+    
+    //change this location tomorow- take it from the locationMapVC...
+    infection.latCord=0.1;
+    infection.longCord=0.1;
+    infection.locationName = self.location.text;
+    
+    infection.quantity=(int)self.stepper.value;
+    infection.date=self.dateTextField.text;
+    
+    [infection addInfection];
+    [self.navigationController popViewControllerAnimated:YES];
+
+    
+
 }
 - (IBAction)stepperValueChanged:(id)sender {
     
     self.stepperLabel.text=[NSString stringWithFormat:@"%d",(int)self.stepper.value];
 
+}
+
+-(BOOL)textFieldShouldReturn:(UITextField *)textField{
+    [self.dateTextField resignFirstResponder];
+    return YES;
 }
 @end

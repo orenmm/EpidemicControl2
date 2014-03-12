@@ -13,7 +13,7 @@
 
 typedef void(^APIReturnsArray)(NSArray *data);
 typedef void(^APIReturnsDictionary)(NSDictionary *data);
-typedef void(^APIReturnsint)(int infection_id);
+typedef void(^APIReturnsData)(NSData *data);
 
 
 

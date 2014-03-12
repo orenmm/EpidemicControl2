@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface AddInfectedViewController : UIViewController <UITableViewDataSource , UITableViewDelegate>
+@interface AddInfectedViewController : UIViewController <UITableViewDataSource , UITableViewDelegate,UITextFieldDelegate>
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (weak, nonatomic) IBOutlet UILabel *location;
