@@ -16,6 +16,8 @@
 @implementation AddInfectedViewController
 {
     AppData* appData;
+    NSIndexPath *selectedIndexPath;
+
 }
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -31,6 +33,7 @@
 {
     [super viewDidLoad];
     appData = [AppData shareInstance];
+    selectedIndexPath = 0 ;
 	// Do any additional setup after loading the view.
 }
 
@@ -56,6 +59,14 @@
     Virus* virus =appData.viruses[indexPath.row];
     cell.textLabel.text =virus.name;
     cell.imageView.image=[UIImage imageNamed:virus.icon];
+    if (selectedIndexPath == indexPath)
+    {
+        cell.accessoryType = UITableViewCellAccessoryCheckmark;
+    }
+    else
+    {
+        cell.accessoryType = UITableViewCellAccessoryNone;
+    }
     return cell;
     
 }
@@ -67,6 +78,23 @@
     return 30.0;
 }
 
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    if (indexPath ==selectedIndexPath)
+    {
+        return;
+    }
+    else
+    {
+        [tableView deselectRowAtIndexPath:selectedIndexPath animated:NO];
+        
+        UITableViewCell *newCell = [tableView cellForRowAtIndexPath:indexPath];
+        newCell.accessoryType = UITableViewCellAccessoryCheckmark;
+        UITableViewCell *oldCell = [tableView cellForRowAtIndexPath:selectedIndexPath];
+        oldCell.accessoryType = UITableViewCellAccessoryNone;
+        selectedIndexPath = indexPath;
+    }
+    
+}
 
 
 
