@@ -10,6 +10,7 @@
 #import "markerOnMap.h"
 #import "Infection.h"
 #import "EpidemecInfoView.h"
+#import "MarkerButton.h"
 
 @interface LocationMapViewViewController ()
 
@@ -71,6 +72,13 @@
         UIImageView * imageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 80, 80)];
         imageView.image = [UIImage imageNamed:marker.imageName];
         [view addSubview:imageView];
+        //MarkerButton *markerBtn = [[MarkerButton alloc] initWithFrame:imageView.frame];
+        MarkerButton *markerBtn = [MarkerButton buttonWithType:UIButtonTypeRoundedRect];
+        markerBtn.frame = imageView.frame;
+        markerBtn.backgroundColor = [UIColor redColor];
+        [markerBtn addTarget:self action:@selector(markerSelected:) forControlEvents:UIControlEventTouchUpInside];
+       // markerBtn.infection = marker.infection;
+        [view addSubview:markerBtn];
     }
     else
     {
@@ -98,11 +106,25 @@
 - (void)mapView:(MKMapView *)mapView didSelectAnnotationView:(MKAnnotationView *)view
 {
     EpidemecInfoView *epidemicView = [[EpidemecInfoView alloc]initWithFrame:CGRectMake(0, 200, 320, 230)];
+    
     /*markerOnMap *marker = view;
     epidemicView.reporterNameLabel.text = [NSString stringWithFormat:@"%@ %@",marker.infection.firstName, marker.infection.lastName];*/
     [self.view addSubview:epidemicView];
 }
 
+- (IBAction)markerSelected:(id)sender
+{
+    EpidemecInfoView *epidemicView = [[EpidemecInfoView alloc]initWithFrame:CGRectMake(0, 200, 320, 230)];
+    MarkerButton *markerBtn = [[MarkerButton alloc]init];
+    markerBtn = sender;
+    epidemicView.reporterNameLabel.text = [NSString stringWithFormat:@"%@ %@",markerBtn.infection.firstName,markerBtn.infection.lastName];
+    epidemicView.virusNameLabel.text = markerBtn.infection.virus.name;
+    epidemicView.locationLabel.text = markerBtn.infection.locationName;
+    epidemicView.dateLabel.text = markerBtn.infection.date;
+    epidemicView.quantityLabel.text = [NSString stringWithFormat:@"%d", markerBtn.infection.quantity];
+    
+    [self.view addSubview:epidemicView];
+}
 
 - (void)didReceiveMemoryWarning
 {
