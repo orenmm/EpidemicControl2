@@ -54,6 +54,7 @@
 		78D6747F18D091C600D66EB6 /* VirusCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 78D6747E18D091C600D66EB6 /* VirusCell.m */; };
 		F5330B8018D0CB4000DA691C /* EpidemecInfoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F5330B7F18D0CB4000DA691C /* EpidemecInfoView.xib */; };
 		F5330B8318D0CB5D00DA691C /* EpidemecInfoView.m in Sources */ = {isa = PBXBuildFile; fileRef = F5330B8218D0CB5D00DA691C /* EpidemecInfoView.m */; };
+		F5330B9218D0E41B00DA691C /* MarkerButton.m in Sources */ = {isa = PBXBuildFile; fileRef = F5330B9118D0E41B00DA691C /* MarkerButton.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -130,6 +131,8 @@
 		F5330B7F18D0CB4000DA691C /* EpidemecInfoView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EpidemecInfoView.xib; sourceTree = "<group>"; };
 		F5330B8118D0CB5D00DA691C /* EpidemecInfoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EpidemecInfoView.h; sourceTree = "<group>"; };
 		F5330B8218D0CB5D00DA691C /* EpidemecInfoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EpidemecInfoView.m; sourceTree = "<group>"; };
+		F5330B9018D0E41B00DA691C /* MarkerButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MarkerButton.h; sourceTree = "<group>"; };
+		F5330B9118D0E41B00DA691C /* MarkerButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MarkerButton.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -245,6 +248,8 @@
 				F5330B8118D0CB5D00DA691C /* EpidemecInfoView.h */,
 				F5330B8218D0CB5D00DA691C /* EpidemecInfoView.m */,
 				F5330B7F18D0CB4000DA691C /* EpidemecInfoView.xib */,
+				F5330B9018D0E41B00DA691C /* MarkerButton.h */,
+				F5330B9118D0E41B00DA691C /* MarkerButton.m */,
 			);
 			path = EpidemicControl;
 			sourceTree = "<group>";
@@ -457,6 +462,7 @@
 				78CD63AA18CC94A7002CCBE5 /* Infection.m in Sources */,
 				22D80D8918C8F7D5003D84A4 /* main.m in Sources */,
 				224285F318C922A40099E8D7 /* LocationMapViewViewController.m in Sources */,
+				F5330B9218D0E41B00DA691C /* MarkerButton.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
