@@ -16,6 +16,9 @@
 @implementation AddInfectedViewController
 {
     AppData* appData;
+    //index that wil indicate the virus cell last selected
+    NSIndexPath *selectedIndexPath;
+
 }
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -31,7 +34,12 @@
 {
     [super viewDidLoad];
     appData = [AppData shareInstance];
-	// Do any additional setup after loading the view.
+    selectedIndexPath = 0 ;
+    self.stepper.minimumValue=0;
+    self.stepper.maximumValue=10000;
+    self.stepper.stepValue=1;
+    self.stepper.wraps=NO;
+    self.stepperLabel.text=[NSString stringWithFormat:@"%d",(int)self.stepper.value];
 }
 
 - (void)didReceiveMemoryWarning
@@ -56,6 +64,14 @@
     Virus* virus =appData.viruses[indexPath.row];
     cell.textLabel.text =virus.name;
     cell.imageView.image=[UIImage imageNamed:virus.icon];
+    if (selectedIndexPath == indexPath)
+    {
+        cell.accessoryType = UITableViewCellAccessoryCheckmark;
+    }
+    else
+    {
+        cell.accessoryType = UITableViewCellAccessoryNone;
+    }
     return cell;
     
 }
@@ -67,6 +83,23 @@
     return 30.0;
 }
 
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    if (indexPath ==selectedIndexPath)
+    {
+        return;
+    }
+    else
+    {
+        [tableView deselectRowAtIndexPath:selectedIndexPath animated:NO];
+        
+        UITableViewCell *newCell = [tableView cellForRowAtIndexPath:indexPath];
+        newCell.accessoryType = UITableViewCellAccessoryCheckmark;
+        UITableViewCell *oldCell = [tableView cellForRowAtIndexPath:selectedIndexPath];
+        oldCell.accessoryType = UITableViewCellAccessoryNone;
+        selectedIndexPath = indexPath;
+    }
+    
+}
 
 
 
@@ -77,5 +110,8 @@
 - (IBAction)addToServer:(id)sender {
 }
 - (IBAction)stepperValueChanged:(id)sender {
+    
+    self.stepperLabel.text=[NSString stringWithFormat:@"%d",(int)self.stepper.value];
+
 }
 @end
