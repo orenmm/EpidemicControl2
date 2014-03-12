@@ -16,6 +16,7 @@
 @implementation AddInfectedViewController
 {
     AppData* appData;
+    //index that wil indicate the virus cell last selected
     NSIndexPath *selectedIndexPath;
 
 }
@@ -34,7 +35,11 @@
     [super viewDidLoad];
     appData = [AppData shareInstance];
     selectedIndexPath = 0 ;
-	// Do any additional setup after loading the view.
+    self.stepper.minimumValue=0;
+    self.stepper.maximumValue=10000;
+    self.stepper.stepValue=1;
+    self.stepper.wraps=NO;
+    self.stepperLabel.text=[NSString stringWithFormat:@"%d",(int)self.stepper.value];
 }
 
 - (void)didReceiveMemoryWarning
@@ -105,5 +110,8 @@
 - (IBAction)addToServer:(id)sender {
 }
 - (IBAction)stepperValueChanged:(id)sender {
+    
+    self.stepperLabel.text=[NSString stringWithFormat:@"%d",(int)self.stepper.value];
+
 }
 @end
