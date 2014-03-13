@@ -74,14 +74,14 @@
     {
         NSLog(@"%f,%f", annotation.coordinate.latitude, annotation.coordinate.longitude);
         markerOnMap *marker = annotation;
-        UIImageView * imageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 80, 80)];
+        UIImageView * imageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 40, 40)];
         imageView.image = [UIImage imageNamed:marker.imageName];
         [view addSubview:imageView];
         
         /*  **** making a custom button ***** */
         //MarkerButton *markerBtn = [[MarkerButton alloc] initWithFrame:imageView.frame];
         MarkerButton *markerBtn = [[MarkerButton alloc] init];
-        markerBtn.frame = CGRectMake(0, 0, 80, 80);//imageView.frame;
+        markerBtn.frame = CGRectMake(0, 0, 40, 40);//imageView.frame;
         //[markerBtn setImage:[UIImage imageNamed:marker.imageName] forState:UIControlStateNormal];
         //markerBtn.backgroundColor = [UIColor redColor];
         [markerBtn addTarget:self action:@selector(markerSelected:) forControlEvents:UIControlEventAllEvents];
@@ -90,7 +90,7 @@
         /*view.rightCalloutAccessoryView = markerBtn;
          view.canShowCallout=YES;
          view.enabled = YES;*/
-        view.frame = CGRectMake(view.frame.origin.x, view.frame.origin.y, 80, 80);
+        view.frame = CGRectMake(view.frame.origin.x, view.frame.origin.y, 40, 40);
         view.clipsToBounds = NO;
         [view addSubview:markerBtn];
         /*  **** *********************** ***** */
@@ -127,8 +127,11 @@
 
 - (void)markerSelected:(MarkerButton*)sender
 {
-    EpidemecInfoView *epidemicView = [[EpidemecInfoView alloc]initWithFrame:CGRectMake(0, 200, 320, 191)];
+    NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"EpidemecInfoView" owner:self options:nil];//
+    EpidemecInfoView *epidemicView = nib[0];
+    //[[EpidemecInfoView alloc]initWithFrame:CGRectMake(0, 200, 320, 191)];
     MarkerButton *markerBtn = sender;//[[MarkerButton alloc]init];
+    epidemicView.frame = CGRectMake(0, 200, 320, 191);
     epidemicView.reporterNameLabel.text = [NSString stringWithFormat:@"%@ %@",markerBtn.infection.firstName,markerBtn.infection.lastName];
     epidemicView.virusNameLabel.text = markerBtn.infection.virus.name;
     epidemicView.locationLabel.text = markerBtn.infection.locationName;
