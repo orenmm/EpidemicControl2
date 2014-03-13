@@ -15,8 +15,11 @@
 @property (weak, nonatomic) IBOutlet MKMapView *map;
 - (IBAction)hideKeyboard:(id)sender;
 @property (weak, nonatomic) IBOutlet UITextField *mapTextField;
+- (IBAction)searchLocation:(id)sender;
 
 @property (nonatomic,strong) User* user;
+- (IBAction)goToAddInfection:(id)sender;
+
 
 
 @end

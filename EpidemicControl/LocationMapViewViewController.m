@@ -157,4 +157,10 @@
 }
 
 
+- (IBAction)searchLocation:(id)sender {
+}
+- (IBAction)addInfection:(id)sender {
+}
+- (IBAction)goToAddInfection:(id)sender {
+}
 @end

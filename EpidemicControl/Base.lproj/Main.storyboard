@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4514" systemVersion="13B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="XHC-3l-X8c">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4514" systemVersion="13A3028" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="XHC-3l-X8c">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3747"/>
     </dependencies>
@@ -377,6 +377,9 @@
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="searchLocation:" destination="gRL-5l-9eT" eventType="touchUpInside" id="TXD-Hg-QSS"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.88627450980392153" green="0.88627450980392153" blue="0.88627450980392153" alpha="1" colorSpace="calibratedRGB"/>
@@ -391,7 +394,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="BQp-9E-9V3" kind="push" id="M2P-QW-06w"/>
+                                    <action selector="goToAddInfection:" destination="gRL-5l-9eT" eventType="touchUpInside" id="KhT-ZF-BVa"/>
                                 </connections>
                             </button>
                         </barButtonItem>
@@ -400,6 +403,7 @@
                     <connections>
                         <outlet property="map" destination="Muf-et-7CE" id="dGD-HN-FLJ"/>
                         <outlet property="mapTextField" destination="frb-Ui-rN7" id="YtC-xK-hPh"/>
+                        <segue destination="BQp-9E-9V3" kind="push" identifier="LocationMapToAddInfection" id="xhi-Y8-Oeq"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8fX-IM-nRa" userLabel="First Responder" sceneMemberID="firstResponder"/>
