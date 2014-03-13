@@ -19,6 +19,9 @@
 @implementation LocationMapViewViewController
 {
     NSMutableArray *markers;
+    //to handle the adress we will use a GeoCoder
+    CLGeocoder *geocoder;
+
 }
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -33,9 +36,9 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	
+    geocoder = [[CLGeocoder alloc] init];
     markers= [[NSMutableArray alloc]init];
-    self.map.layer.cornerRadius = self.map.frame.size.width/2;
+    self.map.layer.cornerRadius = self.map.frame.size.height/2;
     self.map.clipsToBounds = YES;
 }
 
