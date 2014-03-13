@@ -7,9 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <MapKit/MapKit.h>
+
 
 @interface AddInfectedViewController : UIViewController <UITableViewDataSource , UITableViewDelegate,UITextFieldDelegate>
 
+@property (nonatomic,strong) MKPlacemark *placemark;
+@property (nonatomic,strong) NSString* address;
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (weak, nonatomic) IBOutlet UILabel *location;
 @property (weak, nonatomic) IBOutlet UITextField *dateTextField;

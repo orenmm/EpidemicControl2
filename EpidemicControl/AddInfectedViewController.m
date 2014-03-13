@@ -45,6 +45,8 @@
     self.stepperLabel.text=[NSString stringWithFormat:@"%d",(int)self.stepper.value];
     
     self.dateTextField.delegate = self;
+    //the address is drown from segue
+    self.location.text=self.address;
 }
 
 - (void)didReceiveMemoryWarning
@@ -121,8 +123,8 @@
     infection.virusID=virus.virusid;
     
     //change this location tomorow- take it from the locationMapVC...
-    infection.latCord=5;
-    infection.longCord=5;
+    infection.latCord=self.placemark.location.coordinate.latitude;
+    infection.longCord=self.placemark.location.coordinate.longitude;
     infection.locationName = self.location.text;
     
     infection.quantity=(int)self.stepper.value;

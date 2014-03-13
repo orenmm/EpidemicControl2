@@ -12,6 +12,7 @@
 #import "EpidemecInfoView.h"
 #import "MarkerButton.h"
 #import <AddressBookUI/AddressBookUI.h>
+#import "AddInfectedViewController.h"
 
 @interface LocationMapViewViewController ()
 
@@ -22,7 +23,7 @@
     NSMutableArray *markers;
     //to handle the adress we will use a GeoCoder
     CLGeocoder *geocoder;
-
+    MKPlacemark *placemark;
 }
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -87,8 +88,8 @@
         markerBtn.infection = marker.infection;
         //[markerBtn setTitle:@"" forState:UIControlStateNormal];
         /*view.rightCalloutAccessoryView = markerBtn;
-        view.canShowCallout=YES;
-        view.enabled = YES;*/
+         view.canShowCallout=YES;
+         view.enabled = YES;*/
         view.frame = CGRectMake(view.frame.origin.x, view.frame.origin.y, 80, 80);
         view.clipsToBounds = NO;
         [view addSubview:markerBtn];
@@ -146,7 +147,7 @@
 - (IBAction)hideKeyboard:(id)sender {
     [self.mapTextField becomeFirstResponder];
     [self.mapTextField resignFirstResponder];
-
+    
 }
 
 
@@ -160,17 +161,58 @@
 
 - (IBAction)searchLocation:(id)sender {
     [geocoder geocodeAddressString:self.mapTextField.text completionHandler:^(NSArray *placemarks, NSError *error) {
-                NSLog(@"%@", placemarks);
-        for (MKPlacemark *placemark in placemarks) {
-            NSLog(@"%@", ABCreateStringWithAddressDictionary(placemark.addressDictionary, YES));
-        }
-            }];
-
+        NSLog(@"%@", placemarks);
+        placemark = placemarks[0];
+//        for (MKPlacemark *placemark in placemarks) {
+//            NSLog(@"subThoroughfare: %@", placemark.subThoroughfare);
+//            NSLog(@"thoroughfare: %@", placemark.thoroughfare);
+//            NSLog(@"name: %@", placemark.name);
+//            NSLog(@"locality: %@", placemark.locality);
+//            NSLog(@"subLocality: %@", placemark.subLocality);
+//            NSLog(@"administrativeArea: %@", placemark.administrativeArea);
+//            NSLog(@"subAdministrativeArea: %@", placemark.subAdministrativeArea);
+//            NSLog(@"postalCode: %@", placemark.postalCode);
+//            NSLog(@"ISOcountryCode: %@", placemark.ISOcountryCode);
+//            NSLog(@"country: %@", placemark.country);
+//            NSLog(@"inlandWater: %@", placemark.inlandWater);
+//            NSLog(@"ocean: %@", placemark.ocean);
+//            NSLog(@"areasOfInterest: %@", placemark.areasOfInterest);
+            
+            NSMutableArray *array = [[NSMutableArray alloc] init];
+            if(placemark.subThoroughfare) [array addObject:placemark.subThoroughfare];
+            if(placemark.thoroughfare) [array addObject:placemark.thoroughfare];
+            if(placemark.name) [array addObject:placemark.name];
+            if(placemark.locality) [array addObject:placemark.locality];
+            if(placemark.subLocality) [array addObject:placemark.subLocality];
+            if(placemark.administrativeArea) [array addObject:placemark.administrativeArea];
+            if(placemark.subAdministrativeArea) [array addObject:placemark.subAdministrativeArea];
+            if(placemark.postalCode) [array addObject:placemark.postalCode];
+            if(placemark.country) [array addObject:placemark.country];
+            if(placemark.inlandWater) [array addObject:placemark.inlandWater];
+            if(placemark.ocean) [array addObject:placemark.ocean];
+            
+            NSString *address = [array componentsJoinedByString:@" "];
+            NSLog(@"addressIS: %@", address);
+        self.mapTextField.text=address;
+            // placemark.addressDictionary
+            // [placemark.addressDictionary
+            // NSLog(@"%@", ABCreateStringWithAddressDictionary(placemark.addressDictionary, YES));
+//        }
+    }];
+    
 }
 
 
 - (IBAction)goToAddInfection:(id)sender {
-    [self performSegueWithIdentifier:@"LocationMapToAddInfection" sender:self];
-
+    if (placemark) {
+        [self performSegueWithIdentifier:@"LocationMapToAddInfection" sender:self];
+    }
+    
+}
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    AddInfectedViewController *dest = segue.destinationViewController;
+    dest.placemark=placemark;
+    dest.address =self.mapTextField.text;
+    
 }
 @end
