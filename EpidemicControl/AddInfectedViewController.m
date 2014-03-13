@@ -36,7 +36,7 @@
     [super viewDidLoad];
     
     appData = [AppData shareInstance];
-    selectedIndexPath = 0 ;
+    selectedIndexPath = [NSIndexPath indexPathForRow:0 inSection:0];
     //definitions for stepper
     self.stepper.minimumValue=0;
     self.stepper.maximumValue=10000;
@@ -69,7 +69,7 @@
     Virus* virus =appData.viruses[indexPath.row];
     cell.textLabel.text =virus.name;
     cell.imageView.image=[UIImage imageNamed:virus.icon];
-    if (selectedIndexPath == indexPath)
+    if (selectedIndexPath.row == indexPath.row)
     {
         cell.accessoryType = UITableViewCellAccessoryCheckmark;
     }
@@ -77,6 +77,7 @@
     {
         cell.accessoryType = UITableViewCellAccessoryNone;
     }
+    cell.selectionStyle=UITableViewCellSelectionStyleNone;
     return cell;
     
 }
@@ -95,7 +96,7 @@
     }
     else
     {
-        [tableView deselectRowAtIndexPath:selectedIndexPath animated:NO];
+       // [tableView deselectRowAtIndexPath:selectedIndexPath animated:NO];
         
         UITableViewCell *newCell = [tableView cellForRowAtIndexPath:indexPath];
         newCell.accessoryType = UITableViewCellAccessoryCheckmark;
@@ -120,8 +121,8 @@
     infection.virusID=virus.virusid;
     
     //change this location tomorow- take it from the locationMapVC...
-    infection.latCord=0.1;
-    infection.longCord=0.1;
+    infection.latCord=5;
+    infection.longCord=5;
     infection.locationName = self.location.text;
     
     infection.quantity=(int)self.stepper.value;
