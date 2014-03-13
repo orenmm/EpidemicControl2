@@ -11,6 +11,7 @@
 #import "Infection.h"
 #import "EpidemecInfoView.h"
 #import "MarkerButton.h"
+#import <AddressBookUI/AddressBookUI.h>
 
 @interface LocationMapViewViewController ()
 
@@ -158,9 +159,18 @@
 
 
 - (IBAction)searchLocation:(id)sender {
+    [geocoder geocodeAddressString:self.mapTextField.text completionHandler:^(NSArray *placemarks, NSError *error) {
+                NSLog(@"%@", placemarks);
+        for (MKPlacemark *placemark in placemarks) {
+            NSLog(@"%@", ABCreateStringWithAddressDictionary(placemark.addressDictionary, YES));
+        }
+            }];
+
 }
-- (IBAction)addInfection:(id)sender {
-}
+
+
 - (IBAction)goToAddInfection:(id)sender {
+    [self performSegueWithIdentifier:@"LocationMapToAddInfection" sender:self];
+
 }
 @end

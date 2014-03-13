@@ -52,6 +52,7 @@
 		78CD63A718CC8776002CCBE5 /* RegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 78CD63A618CC8776002CCBE5 /* RegisterViewController.m */; };
 		78CD63AA18CC94A7002CCBE5 /* Infection.m in Sources */ = {isa = PBXBuildFile; fileRef = 78CD63A918CC94A7002CCBE5 /* Infection.m */; };
 		78D6747F18D091C600D66EB6 /* VirusCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 78D6747E18D091C600D66EB6 /* VirusCell.m */; };
+		78D674C418D1DBA300D66EB6 /* AddressBookUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 78D674C318D1DBA300D66EB6 /* AddressBookUI.framework */; };
 		F5330B8018D0CB4000DA691C /* EpidemecInfoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F5330B7F18D0CB4000DA691C /* EpidemecInfoView.xib */; };
 		F5330B8318D0CB5D00DA691C /* EpidemecInfoView.m in Sources */ = {isa = PBXBuildFile; fileRef = F5330B8218D0CB5D00DA691C /* EpidemecInfoView.m */; };
 		F5330B9218D0E41B00DA691C /* MarkerButton.m in Sources */ = {isa = PBXBuildFile; fileRef = F5330B9118D0E41B00DA691C /* MarkerButton.m */; };
@@ -128,6 +129,7 @@
 		78CD63A918CC94A7002CCBE5 /* Infection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Infection.m; sourceTree = "<group>"; };
 		78D6747D18D091C600D66EB6 /* VirusCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VirusCell.h; sourceTree = "<group>"; };
 		78D6747E18D091C600D66EB6 /* VirusCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VirusCell.m; sourceTree = "<group>"; };
+		78D674C318D1DBA300D66EB6 /* AddressBookUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBookUI.framework; path = System/Library/Frameworks/AddressBookUI.framework; sourceTree = SDKROOT; };
 		F5330B7F18D0CB4000DA691C /* EpidemecInfoView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EpidemecInfoView.xib; sourceTree = "<group>"; };
 		F5330B8118D0CB5D00DA691C /* EpidemecInfoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EpidemecInfoView.h; sourceTree = "<group>"; };
 		F5330B8218D0CB5D00DA691C /* EpidemecInfoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EpidemecInfoView.m; sourceTree = "<group>"; };
@@ -140,6 +142,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				78D674C418D1DBA300D66EB6 /* AddressBookUI.framework in Frameworks */,
 				229304EB18C9E799008AEDCC /* QuartzCore.framework in Frameworks */,
 				229304E918C9E2F0008AEDCC /* CoreLocation.framework in Frameworks */,
 				229304E718C9E2E2008AEDCC /* MapKit.framework in Frameworks */,
@@ -212,6 +215,7 @@
 		22D80D7B18C8F7D4003D84A4 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				78D674C318D1DBA300D66EB6 /* AddressBookUI.framework */,
 				229304EA18C9E799008AEDCC /* QuartzCore.framework */,
 				229304E818C9E2F0008AEDCC /* CoreLocation.framework */,
 				229304E618C9E2E2008AEDCC /* MapKit.framework */,
