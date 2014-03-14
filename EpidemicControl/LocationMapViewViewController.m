@@ -99,7 +99,7 @@
     {
         return nil;
         //user location
-        UIImageView *imageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 64, 64)];
+        UIImageView *imageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 40, 40)];
         imageView.image = [UIImage imageNamed:@"pin1"];
         [view addSubview:imageView];
     }
