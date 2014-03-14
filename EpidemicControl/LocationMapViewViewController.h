@@ -22,5 +22,5 @@
 
 @property (weak, nonatomic) IBOutlet UILabel *errorINlocation;
 
-
+-(void)refreshMapMarkers;
 @end
