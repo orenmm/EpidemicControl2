@@ -73,24 +73,18 @@
     if([annotation isKindOfClass:[markerOnMap class]])
     {
         NSLog(@"%f,%f", annotation.coordinate.latitude, annotation.coordinate.longitude);
+        view.frame = CGRectMake(view.frame.origin.x, view.frame.origin.y, 40, 40);
+        
         markerOnMap *marker = annotation;
         UIImageView * imageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 40, 40)];
         imageView.image = [UIImage imageNamed:marker.imageName];
         [view addSubview:imageView];
         
         /*  **** making a custom button ***** */
-        //MarkerButton *markerBtn = [[MarkerButton alloc] initWithFrame:imageView.frame];
         MarkerButton *markerBtn = [[MarkerButton alloc] init];
-        markerBtn.frame = CGRectMake(0, 0, 40, 40);//imageView.frame;
-        //[markerBtn setImage:[UIImage imageNamed:marker.imageName] forState:UIControlStateNormal];
-        //markerBtn.backgroundColor = [UIColor redColor];
+        markerBtn.frame = CGRectMake(0, 0, 40, 40);
         [markerBtn addTarget:self action:@selector(markerSelected:) forControlEvents:UIControlEventAllEvents];
         markerBtn.infection = marker.infection;
-        //[markerBtn setTitle:@"" forState:UIControlStateNormal];
-        /*view.rightCalloutAccessoryView = markerBtn;
-         view.canShowCallout=YES;
-         view.enabled = YES;*/
-        view.frame = CGRectMake(view.frame.origin.x, view.frame.origin.y, 40, 40);
         view.clipsToBounds = NO;
         [view addSubview:markerBtn];
         /*  **** *********************** ***** */
@@ -124,21 +118,24 @@
     [self.map setRegion:MKCoordinateRegionMake(userLocation.coordinate, MKCoordinateSpanMake(0.1, 0.1))];
 }
 
-
+//when the user select a marker the nib with the info appears
 - (void)markerSelected:(MarkerButton*)sender
 {
-    NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"EpidemecInfoView" owner:self options:nil];//
+    NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"EpidemecInfoView" owner:self options:nil];
     EpidemecInfoView *epidemicView = nib[0];
-    //[[EpidemecInfoView alloc]initWithFrame:CGRectMake(0, 200, 320, 191)];
-    MarkerButton *markerBtn = sender;//[[MarkerButton alloc]init];
+    MarkerButton *markerBtn = sender;
     epidemicView.frame = CGRectMake(0, 200, 320, 191);
     epidemicView.reporterNameLabel.text = [NSString stringWithFormat:@"%@ %@",markerBtn.infection.firstName,markerBtn.infection.lastName];
     epidemicView.virusNameLabel.text = markerBtn.infection.virus.name;
     epidemicView.locationLabel.text = markerBtn.infection.locationName;
     epidemicView.dateLabel.text = markerBtn.infection.date;
     epidemicView.quantityLabel.text = [NSString stringWithFormat:@"%d", markerBtn.infection.quantity];
+    [epidemicView setAlpha:0];
     
     [self.view addSubview:epidemicView];
+    [UIView animateWithDuration:0.5 animations:^{
+        [epidemicView setAlpha:1];
+    }];
 }
 
 - (void)didReceiveMemoryWarning
