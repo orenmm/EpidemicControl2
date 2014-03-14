@@ -17,4 +17,8 @@
 @property (weak, nonatomic) IBOutlet UILabel *quantityLabel;
 - (IBAction)exitNib:(id)sender;
 
+- (IBAction)removeItemfromMap:(id)sender;
+
+
+
 @end

@@ -36,4 +36,7 @@
     }];
     [self removeFromSuperview];
 }
+
+- (IBAction)removeItemfromMap:(id)sender {
+}
 @end
