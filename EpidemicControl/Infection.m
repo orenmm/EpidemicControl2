@@ -34,15 +34,27 @@
         
         NSLog(@"Error: %@", error);
         
-        
-        
     }];
-    
-
 
 }
 
-
+-(void)deleteInfection
+{
+    AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
+    manager.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"text/html", nil];
+    NSDictionary *parameters = @{@"infection_id" : @(self.infectionId)};
+    [manager POST:@"http://70.32.106.118/doctors/rest/infection/deleteInfection.php" parameters:parameters success:^(AFHTTPRequestOperation *operation, id responseObject) {
+        
+        
+        NSLog(@"JSON: %@", responseObject);
+        
+        
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        
+        NSLog(@"Error: %@", error);
+        
+    }];
+}
 
 
 //we will use this in the LoctionMapViewController , ATTTENTIOIN- the block returns array of infections :)

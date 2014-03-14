@@ -7,6 +7,7 @@
 //
 
 #import "EpidemecInfoView.h"
+#import "Infection.h"
 
 @implementation EpidemecInfoView
 
@@ -37,6 +38,15 @@
     [self removeFromSuperview];
 }
 
-- (IBAction)removeItemfromMap:(id)sender {
+- (IBAction)removeItemfromMap:(id)sender
+{
+    Infection *infection = [[Infection alloc]init];
+    infection.infectionId = self.infectionId;
+    [infection deleteInfection];
+    
+    [UIView animateWithDuration:0.5 animations:^{
+        [self setAlpha:0];
+    }];
+    [self removeFromSuperview];
 }
 @end

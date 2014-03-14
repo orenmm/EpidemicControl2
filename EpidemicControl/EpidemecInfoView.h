@@ -15,6 +15,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *locationLabel;
 @property (weak, nonatomic) IBOutlet UILabel *dateLabel;
 @property (weak, nonatomic) IBOutlet UILabel *quantityLabel;
+@property int infectionId;
 - (IBAction)exitNib:(id)sender;
 
 - (IBAction)removeItemfromMap:(id)sender;

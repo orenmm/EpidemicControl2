@@ -48,6 +48,7 @@
 -(void)viewWillAppear:(BOOL)animated{
     //SHOW the navigation top bar
     self.navigationController.navigationBar.hidden = NO;
+    self.errorINlocation.hidden = YES;
     
     //everytime this controller is loaded or reloade the map should reload the infections from the database(on the server) every infection is an annotaion=markerOnMap
     [self.map removeAnnotations:markers];
@@ -129,6 +130,7 @@
     epidemicView.virusNameLabel.text = markerBtn.infection.virus.name;
     epidemicView.locationLabel.text = markerBtn.infection.locationName;
     epidemicView.dateLabel.text = markerBtn.infection.date;
+    epidemicView.infectionId = markerBtn.infection.infectionId;
     epidemicView.quantityLabel.text = [NSString stringWithFormat:@"%d", markerBtn.infection.quantity];
     [epidemicView setAlpha:0];
     
