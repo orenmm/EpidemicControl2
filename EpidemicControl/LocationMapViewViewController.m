@@ -160,23 +160,24 @@
 
 
 - (IBAction)searchLocation:(id)sender {
-    [geocoder geocodeAddressString:self.mapTextField.text completionHandler:^(NSArray *placemarks, NSError *error) {
-        NSLog(@"%@", placemarks);
-        placemark = placemarks[0];
-//        for (MKPlacemark *placemark in placemarks) {
-//            NSLog(@"subThoroughfare: %@", placemark.subThoroughfare);
-//            NSLog(@"thoroughfare: %@", placemark.thoroughfare);
-//            NSLog(@"name: %@", placemark.name);
-//            NSLog(@"locality: %@", placemark.locality);
-//            NSLog(@"subLocality: %@", placemark.subLocality);
-//            NSLog(@"administrativeArea: %@", placemark.administrativeArea);
-//            NSLog(@"subAdministrativeArea: %@", placemark.subAdministrativeArea);
-//            NSLog(@"postalCode: %@", placemark.postalCode);
-//            NSLog(@"ISOcountryCode: %@", placemark.ISOcountryCode);
-//            NSLog(@"country: %@", placemark.country);
-//            NSLog(@"inlandWater: %@", placemark.inlandWater);
-//            NSLog(@"ocean: %@", placemark.ocean);
-//            NSLog(@"areasOfInterest: %@", placemark.areasOfInterest);
+    if(self.mapTextField.text.length){
+        [geocoder geocodeAddressString:self.mapTextField.text completionHandler:^(NSArray *placemarks, NSError *error) {
+            NSLog(@"%@", placemarks);
+            placemark = placemarks[0];
+            //        for (MKPlacemark *placemark in placemarks) {
+            //            NSLog(@"subThoroughfare: %@", placemark.subThoroughfare);
+            //            NSLog(@"thoroughfare: %@", placemark.thoroughfare);
+            //            NSLog(@"name: %@", placemark.name);
+            //            NSLog(@"locality: %@", placemark.locality);
+            //            NSLog(@"subLocality: %@", placemark.subLocality);
+            //            NSLog(@"administrativeArea: %@", placemark.administrativeArea);
+            //            NSLog(@"subAdministrativeArea: %@", placemark.subAdministrativeArea);
+            //            NSLog(@"postalCode: %@", placemark.postalCode);
+            //            NSLog(@"ISOcountryCode: %@", placemark.ISOcountryCode);
+            //            NSLog(@"country: %@", placemark.country);
+            //            NSLog(@"inlandWater: %@", placemark.inlandWater);
+            //            NSLog(@"ocean: %@", placemark.ocean);
+            //            NSLog(@"areasOfInterest: %@", placemark.areasOfInterest);
             
             NSMutableArray *array = [[NSMutableArray alloc] init];
             if(placemark.subThoroughfare) [array addObject:placemark.subThoroughfare];
@@ -193,12 +194,17 @@
             
             NSString *address = [array componentsJoinedByString:@" "];
             NSLog(@"addressIS: %@", address);
-        self.mapTextField.text=address;
+            self.mapTextField.text=address;
             // placemark.addressDictionary
             // [placemark.addressDictionary
             // NSLog(@"%@", ABCreateStringWithAddressDictionary(placemark.addressDictionary, YES));
-//        }
-    }];
+            //        }
+        }];
+    }
+    else{
+        
+    }
+    
     
 }
 
