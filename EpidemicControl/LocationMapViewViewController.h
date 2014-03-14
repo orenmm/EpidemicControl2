@@ -20,6 +20,7 @@
 @property (nonatomic,strong) User* user;
 - (IBAction)goToAddInfection:(id)sender;
 
+@property (weak, nonatomic) IBOutlet UILabel *errorINlocation;
 
 
 @end

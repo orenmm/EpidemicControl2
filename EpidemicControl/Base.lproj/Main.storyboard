@@ -381,6 +381,13 @@
                                     <action selector="searchLocation:" destination="gRL-5l-9eT" eventType="touchUpInside" id="TXD-Hg-QSS"/>
                                 </connections>
                             </button>
+                            <label hidden="YES" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="error!" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="cQk-r7-2je">
+                                <rect key="frame" x="154" y="77" width="150" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.90196078431372551" green="0.41960784313725491" blue="0.41960784313725491" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
@@ -401,6 +408,7 @@
                     </navigationItem>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <connections>
+                        <outlet property="errorINlocation" destination="cQk-r7-2je" id="gV5-vO-2oJ"/>
                         <outlet property="map" destination="Muf-et-7CE" id="dGD-HN-FLJ"/>
                         <outlet property="mapTextField" destination="frb-Ui-rN7" id="YtC-xK-hPh"/>
                         <segue destination="BQp-9E-9V3" kind="push" identifier="LocationMapToAddInfection" id="xhi-Y8-Oeq"/>
