@@ -31,12 +31,31 @@
 }
 */
 
+/* asaf
+ - (IBAction)exitNib:(id)sender
+ {
+ [UIView animateWithDuration:0.5 animations:^{
+ [self setAlpha:0];
+ }];
+ [self removeFromSuperview];
+ }
+
+*/
+
+
+
+
 - (IBAction)exitNib:(id)sender
 {
-    [UIView animateWithDuration:0.5 animations:^{
-        [self setAlpha:0];
-    }];
-    [self removeFromSuperview];
+    [UIView animateWithDuration:0.600
+                     animations:^{  
+                         self.alpha = 0;
+                     }
+                     completion:^(BOOL finished) {
+                         
+                     }];
+    self.hidden = YES;
+
 }
 
 - (IBAction)removeItemfromMap:(id)sender
@@ -52,5 +71,9 @@
         [self setAlpha:0];
     }];
     [self removeFromSuperview];
+    
+    
+    
+    
 }
 @end

@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
+
 @interface EpidemecInfoView : UIView
 
 @property (weak, nonatomic) IBOutlet UILabel *reporterNameLabel;

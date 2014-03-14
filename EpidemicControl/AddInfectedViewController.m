@@ -142,6 +142,12 @@
 
 }
 
+- (IBAction)hideKeyboard:(id)sender {
+    [self.dateTextField becomeFirstResponder];
+    [self.dateTextField resignFirstResponder];
+
+}
+
 -(BOOL)textFieldShouldReturn:(UITextField *)textField{
     [self.dateTextField resignFirstResponder];
     return YES;
