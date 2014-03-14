@@ -15,5 +15,6 @@
 @property (weak, nonatomic) IBOutlet UILabel *locationLabel;
 @property (weak, nonatomic) IBOutlet UILabel *dateLabel;
 @property (weak, nonatomic) IBOutlet UILabel *quantityLabel;
+- (IBAction)exitNib:(id)sender;
 
 @end
