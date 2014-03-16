@@ -42,6 +42,7 @@
 
 - (void)viewWillAppear:(BOOL)animated
 {
+    self.loadingIndicator.hidden = YES;
     //initiate appdata;
     appData = [AppData shareInstance];
     
@@ -87,12 +88,14 @@
     {
         if([self NSStringIsValidEmail:email])
         {
+            self.loadingIndicator.hidden = NO;
             User *user = [[User alloc]initWithFirstName:firstName lastName:lastName email:email pass:password];
             [user registerUser:^(NSDictionary* dictionary){
                 if(dictionary[@"error"])
                 {
                     self.errorTextField.text=dictionary[@"error"];
                     self.errorTextField.hidden = NO;
+                    self.loadingIndicator.hidden = YES;
                 }
                 else
                 {
@@ -100,6 +103,7 @@
                     user.userId = [dictionary[@"id"] integerValue];
                     appData.user = user;
                     [self performSegueWithIdentifier:@"RegisterToMap" sender:user];
+                    self.loadingIndicator.hidden = YES;
                 }
             }];
         }
