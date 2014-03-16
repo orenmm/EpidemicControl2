@@ -45,8 +45,7 @@
     infection.infectionId = self.infectionId;
     [infection deleteInfection];
     
-    /*LocationMapViewViewController *locationMapVC = [[LocationMapViewViewController alloc]init];
-    [locationMapVC refreshMapMarkers];*/
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"deleteInfection" object:nil];
     
     [UIView animateWithDuration:0.5 animations:^{
         [self setAlpha:0];

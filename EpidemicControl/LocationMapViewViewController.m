@@ -53,6 +53,15 @@
     
     //everytime this controller is loaded or reloade the map should reload the infections from the database(on the server) every infection is an annotaion=markerOnMap
     [self refreshMapMarkers];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(refreshMapMarkers) name:@"deleteInfection" object:nil];
+    
+}
+
+- (void)viewWillDisappear:(BOOL)animated
+{
+    //remove all observers from this viewcontroller
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
 -(void)refreshMapMarkers
@@ -91,7 +100,7 @@
         /*  **** making a custom button ***** */
         MarkerButton *markerBtn = [[MarkerButton alloc] init];
         markerBtn.frame = CGRectMake(0, 0, 40, 40);
-        [markerBtn addTarget:self action:@selector(markerSelected:) forControlEvents:UIControlEventAllEvents];
+        [markerBtn addTarget:self action:@selector(markerSelected:) forControlEvents:UIControlEventTouchUpInside];
         markerBtn.infection = marker.infection;
         view.clipsToBounds = NO;
         [view addSubview:markerBtn];
