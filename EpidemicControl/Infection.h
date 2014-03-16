@@ -10,7 +10,7 @@
 #import "AFNetworking.h"
 #import "Virus.h"
 
-
+typedef void(^APIReturnsNothing)(void);
 typedef void(^APIReturnsArray)(NSArray *data);
 typedef void(^APIReturnsDictionary)(NSDictionary *data);
 typedef void(^APIReturnsData)(NSData *data);
@@ -33,7 +33,7 @@ typedef void(^APIReturnsData)(NSData *data);
 @property (nonatomic,strong) Virus* virus;
 
 +(void)getInfections:(APIReturnsArray)completionBlock;
--(void)addInfection;
+-(void)addInfection:(APIReturnsArray)success fail:(APIReturnsNothing)fail;
 -(void)deleteInfection;
 
 +(Infection*)fromDictionary:(NSDictionary*)dictionary;

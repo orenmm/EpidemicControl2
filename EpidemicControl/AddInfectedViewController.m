@@ -130,8 +130,13 @@
     infection.quantity=(int)self.stepper.value;
     infection.date=self.dateTextField.text;
     
-    [infection addInfection];
-    [self.navigationController popViewControllerAnimated:YES];
+    [infection addInfection:^(NSArray *data) {
+        [self.navigationController popViewControllerAnimated:YES];
+    } fail:^{
+        [self.navigationController popViewControllerAnimated:YES];
+
+    }];
+    
 
     
 
