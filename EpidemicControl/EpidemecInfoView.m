@@ -23,13 +23,13 @@
 }
 
 /*
-// Only override drawRect: if you perform custom drawing.
-// An empty implementation adversely affects performance during animation.
-- (void)drawRect:(CGRect)rect
-{
-    // Drawing code
-}
-*/
+ // Only override drawRect: if you perform custom drawing.
+ // An empty implementation adversely affects performance during animation.
+ - (void)drawRect:(CGRect)rect
+ {
+ // Drawing code
+ }
+ */
 
 /* asaf
  - (IBAction)exitNib:(id)sender
@@ -39,8 +39,8 @@
  }];
  [self removeFromSuperview];
  }
-
-*/
+ 
+ */
 
 
 
@@ -48,28 +48,41 @@
 - (IBAction)exitNib:(id)sender
 {
     [UIView animateWithDuration:0.600
-                     animations:^{  
+                     animations:^{
                          self.alpha = 0;
                      }
                      completion:^(BOOL finished) {
                          
                      }];
     self.hidden = YES;
-
+    
 }
 
 - (IBAction)removeItemfromMap:(id)sender
 {
     Infection *infection = [[Infection alloc]init];
     infection.infectionId = self.infectionId;
-    [infection deleteInfection];
-    
-    [[NSNotificationCenter defaultCenter] postNotificationName:@"deleteInfection" object:nil];
-    
-    [UIView animateWithDuration:0.5 animations:^{
-        [self setAlpha:0];
+    [infection deleteInfection:^(NSArray *data) {
+        [[NSNotificationCenter defaultCenter] postNotificationName:@"deleteInfection" object:nil];
+        
+        [UIView animateWithDuration:0.5 animations:^{
+            [self setAlpha:0];
+        } completion:^(BOOL finished) {
+            [self removeFromSuperview];
+        }];
+        
+    } fail:^{
+        [[NSNotificationCenter defaultCenter] postNotificationName:@"deleteInfection" object:nil];
+        
+        [UIView animateWithDuration:0.5 animations:^{
+            [self setAlpha:0];
+        } completion:^(BOOL finished) {
+            [self removeFromSuperview];
+        }];
+        
     }];
-    [self removeFromSuperview];
+    
+    
     
     
     

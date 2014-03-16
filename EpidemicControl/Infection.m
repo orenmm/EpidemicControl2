@@ -38,7 +38,7 @@
 
 }
 
--(void)deleteInfection
+-(void)deleteInfection:(APIReturnsArray)success fail:(APIReturnsNothing)fail
 {
     AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
     manager.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"text/html", nil];
@@ -47,10 +47,11 @@
         
         
         NSLog(@"JSON: %@", responseObject);
-        
+        success(responseObject);
+
         
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-        
+        fail();
         NSLog(@"Error: %@", error);
         
     }];

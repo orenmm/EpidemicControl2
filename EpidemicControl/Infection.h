@@ -34,7 +34,7 @@ typedef void(^APIReturnsData)(NSData *data);
 
 +(void)getInfections:(APIReturnsArray)completionBlock;
 -(void)addInfection:(APIReturnsArray)success fail:(APIReturnsNothing)fail;
--(void)deleteInfection;
+-(void)deleteInfection:(APIReturnsArray)success fail:(APIReturnsNothing)fail;
 
 +(Infection*)fromDictionary:(NSDictionary*)dictionary;
 +(NSArray*)fromArray:(NSArray*)array;

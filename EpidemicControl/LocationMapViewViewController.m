@@ -67,7 +67,8 @@
 -(void)refreshMapMarkers
 {
     //everytime this controller is loaded or reloade the map should reload the infections from the database(on the server) every infection is an annotaion=markerOnMap
-    [self.map removeAnnotations:markers];
+    [self.map removeAnnotations:self.map.annotations];
+    [markers removeAllObjects];
     [Infection getInfections:^(NSArray *infections){
         for (Infection *infection in infections) {
             markerOnMap *markerInfection = [[markerOnMap alloc]initWithInfection:infection];
