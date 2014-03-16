@@ -22,4 +22,8 @@
 @property (weak, nonatomic) IBOutlet UILabel *stepperLabel;
 - (IBAction)stepperValueChanged:(id)sender;
 
+- (IBAction)hideKeyboard:(id)sender;
+
+
+
 @end

@@ -226,7 +226,7 @@
         [self performSegueWithIdentifier:@"LocationMapToAddInfection" sender:self];
     }
     else{
-        self.errorINlocation.text = @"Please enter location first";
+        self.errorINlocation.text = @"Please enter location first!";
         self.errorINlocation.hidden = NO;
     }
     
