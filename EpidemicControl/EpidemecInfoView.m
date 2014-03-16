@@ -52,16 +52,15 @@
                          self.alpha = 0;
                      }
                      completion:^(BOOL finished) {
-                         
+                         [self removeFromSuperview];
                      }];
-    self.hidden = YES;
-    
 }
 
 - (IBAction)removeItemfromMap:(id)sender
 {
     Infection *infection = [[Infection alloc]init];
     infection.infectionId = self.infectionId;
+    self.LoadingIndicator.hidden = NO;
     [infection deleteInfection:^(NSArray *data) {
         [[NSNotificationCenter defaultCenter] postNotificationName:@"deleteInfection" object:nil];
         
@@ -70,6 +69,7 @@
         } completion:^(BOOL finished) {
             [self removeFromSuperview];
         }];
+        self.LoadingIndicator.hidden = YES;
         
     } fail:^{
         [[NSNotificationCenter defaultCenter] postNotificationName:@"deleteInfection" object:nil];
@@ -79,7 +79,7 @@
         } completion:^(BOOL finished) {
             [self removeFromSuperview];
         }];
-        
+        self.LoadingIndicator.hidden = YES;
     }];
     
     

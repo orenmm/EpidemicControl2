@@ -49,6 +49,11 @@
     self.location.text=self.address;
 }
 
+- (void)viewWillAppear:(BOOL)animated
+{
+    self.LoadingIndicator.hidden = YES;
+}
+
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
@@ -116,6 +121,7 @@
 
 
 - (IBAction)addToServer:(id)sender {
+    self.LoadingIndicator.hidden = NO;
     //alloc init to infection object and then add it to server-DB using the releventfunction
     Infection *infection = [[Infection alloc]init];
     infection.userId=appData.user.userId;
@@ -130,10 +136,13 @@
     infection.quantity=(int)self.stepper.value;
     infection.date=self.dateTextField.text;
     
+    
     [infection addInfection:^(NSArray *data) {
         [self.navigationController popViewControllerAnimated:YES];
+        self.LoadingIndicator.hidden = YES;
     } fail:^{
         [self.navigationController popViewControllerAnimated:YES];
+        self.LoadingIndicator.hidden = YES;
 
     }];
     

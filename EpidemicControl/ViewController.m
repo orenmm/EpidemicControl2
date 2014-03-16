@@ -34,6 +34,7 @@
     //hide the navigation top bar
     self.navigationController.navigationBar.hidden = YES;
     self.loginButton.userInteractionEnabled = YES;
+    self.LoadingIndicator.hidden = YES;
 }
 
 
@@ -78,12 +79,14 @@
     if ((email.length>0) && (password.length>0))
     {
         self.loginButton.userInteractionEnabled = NO;
+        self.LoadingIndicator.hidden = NO;
         [User userLoginWithEmail:email andPassword:password :^(NSDictionary* dictionary){
             if(dictionary[@"error"])
             {
                 self.errorLogin.text = dictionary[@"error"];
                 self.errorLogin.hidden = NO;
                 self.loginButton.userInteractionEnabled = YES;
+                self.LoadingIndicator.hidden = YES;
             }
             else
             {
@@ -91,6 +94,7 @@
                 user.userId=[dictionary[@"id"] integerValue];
                 appData.user = user;
                 [self performSegueWithIdentifier:@"Login" sender:user];
+                self.LoadingIndicator.hidden = YES;
             }
         } ];
         
