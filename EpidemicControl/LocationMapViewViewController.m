@@ -173,54 +173,43 @@
 -(BOOL)textFieldShouldReturn:(UITextField *)textField
 {
     [self.mapTextField becomeFirstResponder];
+    [self findLocation];
     [self.mapTextField resignFirstResponder];
     return YES;
 }
 
 
-- (IBAction)searchLocation:(id)sender {
-    [geocoder geocodeAddressString:self.mapTextField.text completionHandler:^(NSArray *placemarks, NSError *error) {
-        NSLog(@"%@", placemarks);
-        placemark = placemarks[0];
-        //        for (MKPlacemark *placemark in placemarks) {
-        //            NSLog(@"subThoroughfare: %@", placemark.subThoroughfare);
-        //            NSLog(@"thoroughfare: %@", placemark.thoroughfare);
-        //            NSLog(@"name: %@", placemark.name);
-        //            NSLog(@"locality: %@", placemark.locality);
-        //            NSLog(@"subLocality: %@", placemark.subLocality);
-        //            NSLog(@"administrativeArea: %@", placemark.administrativeArea);
-        //            NSLog(@"subAdministrativeArea: %@", placemark.subAdministrativeArea);
-        //            NSLog(@"postalCode: %@", placemark.postalCode);
-        //            NSLog(@"ISOcountryCode: %@", placemark.ISOcountryCode);
-        //            NSLog(@"country: %@", placemark.country);
-        //            NSLog(@"inlandWater: %@", placemark.inlandWater);
-        //            NSLog(@"ocean: %@", placemark.ocean);
-        //            NSLog(@"areasOfInterest: %@", placemark.areasOfInterest);
-        
-        NSMutableArray *array = [[NSMutableArray alloc] init];
-        if(placemark.subThoroughfare) [array addObject:placemark.subThoroughfare];
-        if(placemark.thoroughfare) [array addObject:placemark.thoroughfare];
-        if(placemark.name) [array addObject:placemark.name];
-        if(placemark.locality) [array addObject:placemark.locality];
-        if(placemark.subLocality) [array addObject:placemark.subLocality];
-        if(placemark.administrativeArea) [array addObject:placemark.administrativeArea];
-        if(placemark.subAdministrativeArea) [array addObject:placemark.subAdministrativeArea];
-        if(placemark.postalCode) [array addObject:placemark.postalCode];
-        if(placemark.country) [array addObject:placemark.country];
-        if(placemark.inlandWater) [array addObject:placemark.inlandWater];
-        if(placemark.ocean) [array addObject:placemark.ocean];
-        
-        NSString *address = [array componentsJoinedByString:@" "];
-        NSLog(@"addressIS: %@", address);
-        self.mapTextField.text=address;
-        // placemark.addressDictionary
-        // [placemark.addressDictionary
-        // NSLog(@"%@", ABCreateStringWithAddressDictionary(placemark.addressDictionary, YES));
-        //        }
-    }];
-
+- (IBAction)searchLocation:(id)sender
+{
+    [self findLocation];
 }
 
+-(void)findLocation {
+    if (self.mapTextField.text.length) {
+        [geocoder geocodeAddressString:self.mapTextField.text completionHandler:^(NSArray *placemarks, NSError *error) {
+            NSLog(@"%@", placemarks);
+            placemark = placemarks[0];
+            NSMutableArray *array = [[NSMutableArray alloc] init];
+            if(placemark.subThoroughfare) [array addObject:placemark.subThoroughfare];
+            if(placemark.thoroughfare) [array addObject:placemark.thoroughfare];
+            if(placemark.name) [array addObject:placemark.name];
+            if(placemark.locality) [array addObject:placemark.locality];
+            if(placemark.subLocality) [array addObject:placemark.subLocality];
+            if(placemark.administrativeArea) [array addObject:placemark.administrativeArea];
+            if(placemark.subAdministrativeArea) [array addObject:placemark.subAdministrativeArea];
+            if(placemark.postalCode) [array addObject:placemark.postalCode];
+            if(placemark.country) [array addObject:placemark.country];
+            if(placemark.inlandWater) [array addObject:placemark.inlandWater];
+            if(placemark.ocean) [array addObject:placemark.ocean];
+            NSString *address = [array componentsJoinedByString:@", "];
+            NSLog(@"addressIS: %@", address);
+            self.mapTextField.text=address;
+            [self.map setCenterCoordinate:placemark.location.coordinate animated:YES];
+            [self.map setRegion:MKCoordinateRegionMake(placemark.location.coordinate, MKCoordinateSpanMake(0.1, 0.1))];
+        }];
+    }
+    [self.mapTextField resignFirstResponder];
+}
 
 - (IBAction)goToAddInfection:(id)sender {
     if (placemark) {
