@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		00DAFE475F414ED4B09750B0 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 678B04442FB74581AAE2E43F /* libPods.a */; };
+		22071F3F18D5C13C0063D030 /* epicon_close_btn.png in Resources */ = {isa = PBXBuildFile; fileRef = 22071F3E18D5C13C0063D030 /* epicon_close_btn.png */; };
 		2224161518CC72970017903C /* spalshForEC960.png in Resources */ = {isa = PBXBuildFile; fileRef = 2224161418CC72970017903C /* spalshForEC960.png */; };
 		2224161718CC76B00017903C /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2224161618CC76B00017903C /* Default-568h@2x.png */; };
 		2224161B18CC7DA10017903C /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 2224161A18CC7DA10017903C /* Podfile */; };
@@ -70,6 +71,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		22071F3E18D5C13C0063D030 /* epicon_close_btn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = epicon_close_btn.png; sourceTree = "<group>"; };
 		2224161418CC72970017903C /* spalshForEC960.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = spalshForEC960.png; sourceTree = "<group>"; };
 		2224161618CC76B00017903C /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		2224161A18CC7DA10017903C /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
@@ -171,6 +173,7 @@
 		229304F118C9EBF2008AEDCC /* images */ = {
 			isa = PBXGroup;
 			children = (
+				22071F3E18D5C13C0063D030 /* epicon_close_btn.png */,
 				22DB29B718D3387000B944DB /* Nib_bottom.png */,
 				22362C7C18D0747600A30E09 /* virus01.png */,
 				22362C7D18D0747600A30E09 /* virus02.png */,
@@ -404,6 +407,7 @@
 				22362C8318D0747600A30E09 /* virus01.png in Resources */,
 				229304F018C9EBE5008AEDCC /* pin1.png in Resources */,
 				22362C8918D0747600A30E09 /* virus07.png in Resources */,
+				22071F3F18D5C13C0063D030 /* epicon_close_btn.png in Resources */,
 				22DB29B818D3387000B944DB /* Nib_bottom.png in Resources */,
 				22362C8718D0747600A30E09 /* virus05.png in Resources */,
 			);

@@ -142,7 +142,7 @@
     NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"EpidemecInfoView" owner:self options:nil];
     EpidemecInfoView *epidemicView = nib[0];
     MarkerButton *markerBtn = sender;
-    epidemicView.frame = CGRectMake(0, 200, 320, 191);
+    epidemicView.frame = CGRectMake(0, 65, 320, 500);
     epidemicView.reporterNameLabel.text = [NSString stringWithFormat:@"%@ %@",markerBtn.infection.firstName,markerBtn.infection.lastName];
     epidemicView.virusNameLabel.text = markerBtn.infection.virus.name;
     epidemicView.locationLabel.text = markerBtn.infection.locationName;
@@ -155,6 +155,11 @@
     [UIView animateWithDuration:0.5 animations:^{
         [epidemicView setAlpha:1];
     }];
+    CLLocation *location = [[CLLocation alloc]initWithLatitude:markerBtn.infection.latCord longitude:markerBtn.infection.longCord];
+    
+    [self.map setCenterCoordinate:location.coordinate animated:YES];
+    [self.map setRegion:MKCoordinateRegionMake(location.coordinate, MKCoordinateSpanMake(0.1, 0.1))];
+
 }
 
 - (void)didReceiveMemoryWarning
