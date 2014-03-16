@@ -21,6 +21,7 @@
 
 - (IBAction)removeItemfromMap:(id)sender;
 
+@property (weak, nonatomic) IBOutlet UIActivityIndicatorView *LoadingIndicator;
 
 
 @end

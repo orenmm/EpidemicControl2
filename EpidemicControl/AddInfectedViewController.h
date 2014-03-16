@@ -24,6 +24,7 @@
 
 - (IBAction)hideKeyboard:(id)sender;
 
+@property (weak, nonatomic) IBOutlet UIActivityIndicatorView *LoadingIndicator;
 
 
 @end

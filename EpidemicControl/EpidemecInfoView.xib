@@ -15,7 +15,7 @@
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <subviews>
                         <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3cs-1d-eyh">
-                            <rect key="frame" x="150" y="155" width="93" height="50"/>
+                            <rect key="frame" x="130" y="149" width="93" height="50"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <color key="backgroundColor" red="0.33333333329999998" green="0.33725490200000002" blue="0.31764705879999999" alpha="1" colorSpace="calibratedRGB"/>
                             <state key="normal" title="Delete">
@@ -26,6 +26,10 @@
                                 <action selector="removeItemfromMap:" destination="Efh-Id-F9g" eventType="touchUpInside" id="aDE-eA-etA"/>
                             </connections>
                         </button>
+                        <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" animating="YES" style="white" translatesAutoresizingMaskIntoConstraints="NO" id="ViW-LF-Ao7">
+                            <rect key="frame" x="213" y="164" width="20" height="20"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        </activityIndicatorView>
                     </subviews>
                     <color key="backgroundColor" red="0.33333333329999998" green="0.33725490200000002" blue="0.31764705879999999" alpha="1" colorSpace="calibratedRGB"/>
                 </view>
@@ -132,6 +136,7 @@
             </subviews>
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
             <connections>
+                <outlet property="LoadingIndicator" destination="ViW-LF-Ao7" id="m6z-Ac-JPc"/>
                 <outlet property="dateLabel" destination="Te6-Wy-EEk" id="KpL-PZ-d0n"/>
                 <outlet property="locationLabel" destination="1Qe-bC-xth" id="gqd-YU-1bg"/>
                 <outlet property="quantityLabel" destination="LUa-kn-3y8" id="Q8g-Sx-pay"/>

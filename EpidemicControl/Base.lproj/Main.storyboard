@@ -9,7 +9,7 @@
             <objects>
                 <viewController id="vXZ-lx-hvc" userLabel="View Controller (login)" customClass="ViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="Y4l-xl-P6A" userLabel="DismissKeyBoard">
@@ -71,12 +71,17 @@
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="white" id="JSm-mm-EVk">
+                                <rect key="frame" x="283" y="303" width="20" height="20"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="rlM-Xc-CO9"/>
                     <nil key="simulatedTopBarMetrics"/>
                     <connections>
+                        <outlet property="LoadingIndicator" destination="JSm-mm-EVk" id="47T-Ro-QN2"/>
                         <outlet property="emailField" destination="G75-NN-YEJ" id="c56-AT-fEP"/>
                         <outlet property="errorLogin" destination="hk0-eR-c1l" id="CLT-DP-1TS"/>
                         <outlet property="loginButton" destination="dpW-VO-hMd" id="eRX-jr-ZUr"/>
@@ -93,7 +98,7 @@
             <objects>
                 <viewController id="QdJ-Gk-XqC" customClass="RegisterViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ltz-PC-CLS">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="epidemic_control_register.png" id="Cht-le-pPk">
@@ -176,6 +181,10 @@
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="white" id="boy-Ni-lGZ">
+                                <rect key="frame" x="283" y="305" width="20" height="20"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
@@ -187,6 +196,7 @@
                         <outlet property="firstnameERROR" destination="VT0-do-RXr" id="X6n-kG-GCc"/>
                         <outlet property="lastNameTextDField" destination="Zg8-V4-oAw" id="WsU-X2-oyh"/>
                         <outlet property="lastnameERROR" destination="x4M-V6-5bN" id="Jng-hQ-iNA"/>
+                        <outlet property="loadingIndicator" destination="boy-Ni-lGZ" id="0Jn-6D-lXp"/>
                         <outlet property="passERROR" destination="Ims-fJ-hIe" id="HCy-Pt-BfT"/>
                         <outlet property="passwordTextField" destination="lwY-Ug-rJu" id="AoX-Op-on2"/>
                         <segue destination="gRL-5l-9eT" kind="push" identifier="RegisterToMap" id="vgJ-rV-piE"/>
@@ -201,7 +211,7 @@
             <objects>
                 <viewController id="BQp-9E-9V3" customClass="AddInfectedViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="rbi-kU-DAf">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="9E1-cO-xsJ" userLabel="dissmissKeyboard">
@@ -244,7 +254,7 @@
                                 </connections>
                             </stepper>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="jSR-cY-w6q">
-                                <rect key="frame" x="20" y="96" width="280" height="120"/>
+                                <rect key="frame" x="20" y="119.5" width="280" height="120"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <color key="sectionIndexColor" red="0.33333333329999998" green="0.33725490200000002" blue="0.31764705879999999" alpha="1" colorSpace="calibratedRGB"/>
@@ -305,12 +315,17 @@
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="white" id="XL0-RR-2dT">
+                                <rect key="frame" x="215" y="418" width="20" height="20"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" red="0.90196079015731812" green="0.90196079015731812" blue="0.90196079015731812" alpha="1" colorSpace="calibratedRGB"/>
                         <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <navigationItem key="navigationItem" id="yXj-ZR-p0Y"/>
                     <connections>
+                        <outlet property="LoadingIndicator" destination="XL0-RR-2dT" id="nJT-JW-lja"/>
                         <outlet property="dateTextField" destination="2k1-wG-oJQ" id="rUI-1p-Un2"/>
                         <outlet property="location" destination="g74-se-gPz" id="zuK-Lb-b4o"/>
                         <outlet property="stepper" destination="nlN-cj-22h" id="13z-ra-d9z"/>
@@ -342,7 +357,7 @@
             <objects>
                 <viewController id="gRL-5l-9eT" customClass="LocationMapViewViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="4aI-qS-BIN">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="3Ws-TS-VBy" userLabel="dismisskeyboard">
@@ -436,7 +451,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8fX-IM-nRa" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="300" y="-514"/>
+            <point key="canvasLocation" x="317" y="-479"/>
         </scene>
     </scenes>
     <resources>
@@ -450,9 +465,9 @@
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
-        <simulatedScreenMetrics key="destination"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="dtU-4K-uoq"/>
+        <segue reference="vgJ-rV-piE"/>
     </inferredMetricsTieBreakers>
 </document>

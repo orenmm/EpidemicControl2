@@ -21,6 +21,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *passERROR;
 
 
+@property (weak, nonatomic) IBOutlet UIActivityIndicatorView *loadingIndicator;
 
 
 
